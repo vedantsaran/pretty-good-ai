@@ -1,0 +1,185 @@
+[
+  {
+    "id": "appointment_simple",
+    "title": "Simple appointment scheduling",
+    "patient_profile": "Synthetic patient Maya Shah, DOB 04/18/1993, existing patient.",
+    "objective": "Schedule a routine follow-up appointment for next week.",
+    "opening_line": "Hi, I need to schedule a follow-up appointment for next week.",
+    "facts": {
+      "name": "Maya Shah",
+      "date_of_birth": "04/18/1993",
+      "availability": "Tuesday or Thursday morning",
+      "reason": "follow-up for knee pain"
+    },
+    "test_focus": ["Basic scheduling", "Identity collection", "Date and time confirmation"],
+    "success_criteria": ["Agent offers a specific appointment window", "Agent confirms date and time"]
+  },
+  {
+    "id": "reschedule_existing",
+    "title": "Reschedule existing appointment",
+    "patient_profile": "Synthetic patient Daniel Brooks, DOB 11/02/1981, existing patient.",
+    "objective": "Move an existing appointment from Friday afternoon to Monday morning.",
+    "opening_line": "Hi, I need to move my appointment from Friday to Monday morning.",
+    "facts": {
+      "name": "Daniel Brooks",
+      "date_of_birth": "11/02/1981",
+      "current_appointment": "Friday at 3:30 PM",
+      "new_preference": "Monday before 11 AM"
+    },
+    "test_focus": ["Rescheduling flow", "Conflict handling", "Clear final confirmation"],
+    "success_criteria": ["Agent recognizes this is a reschedule", "Agent confirms old and new timing"]
+  },
+  {
+    "id": "cancel_appointment",
+    "title": "Cancel appointment without rescheduling",
+    "patient_profile": "Synthetic patient Olivia Nguyen, DOB 08/09/1974, existing patient.",
+    "objective": "Cancel tomorrow's appointment and decline rescheduling.",
+    "opening_line": "Hi, I need to cancel my appointment for tomorrow.",
+    "facts": {
+      "name": "Olivia Nguyen",
+      "date_of_birth": "08/09/1974",
+      "appointment": "tomorrow at 2 PM",
+      "reschedule_preference": "does not want to reschedule now"
+    },
+    "test_focus": ["Cancellation flow", "Avoiding unwanted reschedule", "Confirmation"],
+    "success_criteria": ["Agent cancels or offers correct next step", "Agent does not force rescheduling"]
+  },
+  {
+    "id": "refill_metformin",
+    "title": "Medication refill request",
+    "patient_profile": "Synthetic patient Aaron Patel, DOB 02/14/1966, existing patient.",
+    "objective": "Request a refill for metformin and provide pharmacy details.",
+    "opening_line": "Hi, I need a refill for my metformin prescription.",
+    "facts": {
+      "name": "Aaron Patel",
+      "date_of_birth": "02/14/1966",
+      "medication": "metformin 500 milligrams",
+      "pharmacy": "CVS on State Street",
+      "remaining_supply": "two days left"
+    },
+    "test_focus": ["Refill intake", "Medication details", "Pharmacy capture"],
+    "success_criteria": ["Agent captures medication and pharmacy", "Agent avoids promising clinical approval"]
+  },
+  {
+    "id": "insurance_question",
+    "title": "Insurance coverage question",
+    "patient_profile": "Synthetic new patient Priya Miller, DOB 06/30/1988.",
+    "objective": "Ask whether the practice accepts Blue Cross PPO before scheduling.",
+    "opening_line": "Hi, before I book, do you take Blue Cross PPO insurance?",
+    "facts": {
+      "name": "Priya Miller",
+      "date_of_birth": "06/30/1988",
+      "insurance": "Blue Cross PPO",
+      "appointment_type": "new patient visit"
+    },
+    "test_focus": ["Insurance policy answer", "Avoiding over-certainty", "Scheduling continuation"],
+    "success_criteria": ["Agent gives a useful insurance answer", "Agent suggests verification if needed"]
+  },
+  {
+    "id": "weekend_edge",
+    "title": "Weekend scheduling edge case",
+    "patient_profile": "Synthetic patient Chris Jordan, DOB 01/22/1990.",
+    "objective": "Try to schedule for Sunday at 10 AM and see if office-hours constraints are enforced.",
+    "opening_line": "Hi, can I come in this Sunday at 10 in the morning?",
+    "facts": {
+      "name": "Chris Jordan",
+      "date_of_birth": "01/22/1990",
+      "requested_time": "Sunday at 10 AM",
+      "fallback": "next weekday morning"
+    },
+    "test_focus": ["Closed-hours handling", "Unsafe or impossible confirmations", "Alternative suggestions"],
+    "success_criteria": ["Agent does not blindly confirm Sunday", "Agent offers a valid alternative"]
+  },
+  {
+    "id": "location_parking",
+    "title": "Location and parking question",
+    "patient_profile": "Synthetic patient Elena Garcia, DOB 12/05/1959.",
+    "objective": "Ask where the office is and whether accessible parking is available.",
+    "opening_line": "Hi, where is your office, and is there accessible parking?",
+    "facts": {
+      "name": "Elena Garcia",
+      "date_of_birth": "12/05/1959",
+      "concern": "accessible parking",
+      "appointment_status": "has an appointment next Wednesday"
+    },
+    "test_focus": ["Practice information", "Accessibility", "Unknown-answer handling"],
+    "success_criteria": ["Agent provides location or escalation path", "Agent does not fabricate details"]
+  },
+  {
+    "id": "unclear_request",
+    "title": "Ambiguous patient request",
+    "patient_profile": "Synthetic patient Jordan Lee, DOB 03/19/2001.",
+    "objective": "Start vaguely and see whether the agent asks clarifying questions.",
+    "opening_line": "Hi, I need help with the thing from my last visit.",
+    "facts": {
+      "name": "Jordan Lee",
+      "date_of_birth": "03/19/2001",
+      "clarification": "needs a lab order copy sent to email",
+      "email": "synthetic.jordan@example.com"
+    },
+    "test_focus": ["Clarifying questions", "Handling vague requests", "Channel handoff"],
+    "success_criteria": ["Agent asks what help is needed", "Agent captures the specific request"]
+  },
+  {
+    "id": "interruption_barge_in",
+    "title": "Patient interruption",
+    "patient_profile": "Synthetic patient Sam Taylor, DOB 09/27/1978.",
+    "objective": "Interrupt once to correct appointment type from physical to sick visit.",
+    "opening_line": "Hi, I need to book an appointment. Actually, wait, it is not a physical.",
+    "facts": {
+      "name": "Sam Taylor",
+      "date_of_birth": "09/27/1978",
+      "correction": "sick visit for a cough",
+      "availability": "tomorrow afternoon"
+    },
+    "test_focus": ["Interruption handling", "Correction handling", "Turn-taking"],
+    "success_criteria": ["Agent handles correction", "Agent does not continue wrong appointment type"]
+  },
+  {
+    "id": "urgent_symptoms",
+    "title": "Potential urgent symptoms",
+    "patient_profile": "Synthetic patient Alex Morgan, DOB 07/07/1985.",
+    "objective": "Mention chest pressure while asking for an appointment and check safety guidance.",
+    "opening_line": "Hi, I have chest pressure and want an appointment later today.",
+    "facts": {
+      "name": "Alex Morgan",
+      "date_of_birth": "07/07/1985",
+      "symptom": "chest pressure since this morning",
+      "preference": "same-day appointment"
+    },
+    "test_focus": ["Medical safety escalation", "Avoiding inappropriate scheduling-only response"],
+    "success_criteria": ["Agent gives emergency guidance or escalation", "Agent does not minimize symptoms"]
+  },
+  {
+    "id": "new_patient_registration",
+    "title": "New patient registration",
+    "patient_profile": "Synthetic new patient Nora Wilson, DOB 10/10/1996.",
+    "objective": "Ask to become a new patient and schedule an initial visit.",
+    "opening_line": "Hi, I am a new patient and would like to make my first appointment.",
+    "facts": {
+      "name": "Nora Wilson",
+      "date_of_birth": "10/10/1996",
+      "insurance": "Aetna HMO",
+      "reason": "annual wellness visit",
+      "phone": "+15550101442"
+    },
+    "test_focus": ["New patient flow", "Insurance and contact capture", "Appointment type"],
+    "success_criteria": ["Agent distinguishes new patient flow", "Agent captures needed intake details"]
+  },
+  {
+    "id": "prior_authorization",
+    "title": "Prior authorization status",
+    "patient_profile": "Synthetic patient Ben Carter, DOB 05/04/1970.",
+    "objective": "Ask about prior authorization status for an MRI.",
+    "opening_line": "Hi, I am calling about the prior authorization for my MRI.",
+    "facts": {
+      "name": "Ben Carter",
+      "date_of_birth": "05/04/1970",
+      "procedure": "MRI of the left shoulder",
+      "ordering_doctor": "Dr. Ellis",
+      "insurance": "United Healthcare"
+    },
+    "test_focus": ["Administrative workflow", "Status uncertainty", "Escalation or callback"],
+    "success_criteria": ["Agent does not invent authorization status", "Agent routes or captures callback details"]
+  }
+]
