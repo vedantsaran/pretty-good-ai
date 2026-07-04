@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import shutil
 import subprocess
 import time
@@ -11,6 +12,9 @@ from typing import Any
 import httpx
 
 from .config import Settings
+from .telephony import recording_auth
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -129,23 +133,36 @@ def _format_time(seconds: float) -> str:
     return f"{minutes:02d}:{remaining:05.2f}"
 
 
-async def download_twilio_recording(
+async def download_call_recording(
     settings: Settings,
     recording_url: str,
     recording_sid: str,
     call_sid: str,
-) -> Path:
+) -> Path | None:
     destination_dir = settings.artifact_dir / f"recordings-{call_sid}"
     destination_dir.mkdir(parents=True, exist_ok=True)
     url = recording_url
     if not url.endswith(".mp3"):
         url = f"{url}.mp3"
     destination = destination_dir / f"{recording_sid}.mp3"
+    auth = recording_auth(settings)
     async with httpx.AsyncClient(timeout=60.0) as client:
         response = await client.get(
             url,
-            auth=(settings.twilio_account_sid, settings.twilio_auth_token),
+            auth=auth,
         )
-        response.raise_for_status()
+        try:
+            response.raise_for_status()
+        except httpx.HTTPStatusError as exc:
+            logger.warning(
+                "Could not download provider recording %s for call %s: HTTP %s",
+                recording_sid,
+                call_sid,
+                exc.response.status_code,
+            )
+            return None
         destination.write_bytes(response.content)
     return destination
+
+
+download_twilio_recording = download_call_recording

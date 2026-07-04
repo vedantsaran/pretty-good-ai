@@ -1,0 +1,177 @@
+{
+  "call_sid": "605be7ff-3872-46f2-b6b4-d509876a8d79",
+  "scenario_id": "appointment_simple",
+  "started_at_epoch": 1783137865.9107652,
+  "duration_seconds": 136.911,
+  "turns": [
+    {
+      "time": 5.884,
+      "speaker": "agent",
+      "text": "Recorded for quality and training purposes.",
+      "meta": {}
+    },
+    {
+      "time": 9.202,
+      "speaker": "patient",
+      "text": "Hi, I need to schedule a follow-up appointment for next week.",
+      "meta": {
+        "reason": "Patient initiates the call with the objective of scheduling a follow-up appointment.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 10.979,
+      "speaker": "agent",
+      "text": "Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 14.08,
+      "speaker": "patient",
+      "text": "Hi, I need to schedule a follow-up appointment for next week.",
+      "meta": {
+        "reason": "Patient states the objective clearly to initiate scheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 24.734,
+      "speaker": "agent",
+      "text": "I see you're calling from the number we have on file. Am I speaking with the?",
+      "meta": {}
+    },
+    {
+      "time": 27.188,
+      "speaker": "patient",
+      "text": "Yes, this is Maya Shah.",
+      "meta": {
+        "reason": "Patient confirms identity to proceed with scheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 31.846,
+      "speaker": "agent",
+      "text": "Please provide your date of birth.",
+      "meta": {}
+    },
+    {
+      "time": 34.839,
+      "speaker": "patient",
+      "text": "It's April 18, 1993.",
+      "meta": {
+        "reason": "Patient provides date of birth as requested to proceed with scheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 38.508,
+      "speaker": "agent",
+      "text": "I need your date of birth to continue. Could you please tell me your date of birth?",
+      "meta": {}
+    },
+    {
+      "time": 41.534,
+      "speaker": "patient",
+      "text": "I already said it: April 18, 1993.",
+      "meta": {
+        "reason": "Patient repeats DOB clearly since agent didn't acknowledge it.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 59.616,
+      "speaker": "agent",
+      "text": "Thank you, Vedant. What time of appointment would you like to schedule? For example, is this for a routine visit, a follow-up, something urgent, or a procedure?",
+      "meta": {}
+    },
+    {
+      "time": 63.676,
+      "speaker": "patient",
+      "text": "It's a follow-up for knee pain, and I'm available Tuesday or Thursday morning next week.",
+      "meta": {
+        "reason": "Patient corrects the wrong name and provides reason and availability to move scheduling forward.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 91.65,
+      "speaker": "agent",
+      "text": "We have openings with Judy Hauser on Tuesday, July 7 at 11AM, 1PM, and 2PM. Would you like to book one of these times?",
+      "meta": {}
+    },
+    {
+      "time": 95.525,
+      "speaker": "patient",
+      "text": "Yes, Tuesday at 11 AM works for me.",
+      "meta": {
+        "reason": "Patient accepts the offered appointment slot to proceed with scheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 121.982,
+      "speaker": "agent",
+      "text": "The dot, your follow-up appointment is set for Tuesday, July 7 at 11AM with doctor Duvihauser at Pivot Point Orthopedics. Please bring your photo ID, insurance card, a list of your current medications, and any imaging discs you have. Is there anything else I can help you with?",
+      "meta": {}
+    },
+    {
+      "time": 124.768,
+      "speaker": "patient",
+      "text": "No, that's all. Thank you!",
+      "meta": {
+        "reason": "Appointment successfully scheduled and confirmed. Objective achieved.",
+        "end_call": true
+      }
+    },
+    {
+      "time": 133.31,
+      "speaker": "agent",
+      "text": "You're all set. Have a great day.",
+      "meta": {}
+    },
+    {
+      "time": 135.394,
+      "speaker": "patient",
+      "text": "Thank you, goodbye.",
+      "meta": {
+        "reason": "Appointment successfully scheduled and confirmed. Objective completed.",
+        "end_call": true
+      }
+    }
+  ],
+  "events": [
+    {
+      "time": 0.001,
+      "event": "signalwire_start",
+      "payload": {
+        "streamSid": "b127a8c2-e284-4fbd-8d28-8b442316f9ea",
+        "accountSid": "88c611f8-76aa-4b3d-8b9c-a45c093871c7",
+        "callSid": "605be7ff-3872-46f2-b6b4-d509876a8d79",
+        "tracks": [
+          "inbound"
+        ],
+        "mediaFormat": {
+          "encoding": "audio/x-mulaw",
+          "sampleRate": 8000,
+          "channels": 1
+        }
+      }
+    },
+    {
+      "time": 10.98,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 136.833,
+      "event": "signalwire_stop",
+      "payload": {
+        "event": "stop",
+        "sequenceNumber": "6854"
+      }
+    }
+  ]
+}

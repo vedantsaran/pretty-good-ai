@@ -6,20 +6,17 @@ and writes artifacts for the final GitHub submission.
 
 ## What it uses
 
-- Twilio Programmable Voice for outbound calls and call recordings
-- Twilio Media Streams for real-time bidirectional call audio
+- SignalWire or Twilio for outbound calls and call recordings
+- SignalWire cXML Streams or Twilio Media Streams for real-time bidirectional call audio
 - Deepgram for live speech-to-text and text-to-speech
 - DeepSeek for the patient-dialogue brain and transcript analysis
 
 ## Safety guard
 
-The code refuses to call anything except:
-
-```text
-+1-805-439-8008
-```
-
-Keep `PG_TARGET_NUMBER=+18054398008` in `.env`.
+Set `PG_TARGET_NUMBER` in `.env` to the official assessment test number from
+the challenge PDF. The code refuses to call any other target, and
+`pgai-bot check-env` verifies that lock without printing configured phone
+values.
 
 ## Setup
 
@@ -30,9 +27,9 @@ cp .env.example .env
 
 Fill `.env` with local credentials:
 
-- `TWILIO_ACCOUNT_SID`
-- `TWILIO_AUTH_TOKEN`
-- `TWILIO_FROM_NUMBER`
+- `VOICE_PROVIDER=signalwire` or `VOICE_PROVIDER=twilio`
+- SignalWire: `SIGNALWIRE_PROJECT_ID`, `SIGNALWIRE_API_TOKEN`, `SIGNALWIRE_SPACE_URL`, `SIGNALWIRE_FROM_NUMBER`
+- Twilio: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM_NUMBER`
 - `PUBLIC_BASE_URL`
 - `DEEPGRAM_API_KEY`
 - `DEEPSEEK_API_KEY`
@@ -69,8 +66,11 @@ uv run pgai-bot call --scenario appointment_simple
 For the required 10-call run:
 
 ```bash
-uv run pgai-bot call-batch --limit 10 --pause 20
+uv run pgai-bot call-batch --limit 10 --pause 150
 ```
+
+The planned 10-call scenario set is documented in `docs/CALL_PLAN.md`. Do not
+run live calls without explicit approval at action time.
 
 ## Artifacts
 
@@ -87,8 +87,23 @@ Each call directory includes:
 - `agent-side.mp3`
 - `patient-side.mp3`
 
-Twilio recording callbacks also download mixed/dual call recordings when Twilio
+Carrier recording callbacks also download call recordings when the provider
 makes the recording available.
+
+Check artifact structure after calls:
+
+```bash
+uv run pgai-bot validate-artifacts
+```
+
+## Submission checklist
+
+- Working Python voice bot: ready
+- README, architecture doc, and `.env.example`: ready
+- Call plan and submission checklist: ready
+- 10+ calls with transcripts and MP3 recordings: ready under `artifacts/calls/`
+- Bug report with call references and evidence: ready in `BUG_REPORT.md`
+- Loom walkthrough and AI-debugging screen recording: pending user action
 
 ## Bug report draft
 

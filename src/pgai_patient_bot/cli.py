@@ -7,7 +7,6 @@ import time
 from pathlib import Path
 
 import uvicorn
-from twilio.rest import Client
 
 from .config import (
     ConfigError,
@@ -19,6 +18,8 @@ from .config import (
 )
 from .llm import TranscriptAnalyzer
 from .scenarios import get_scenario, load_scenarios
+from .telephony import start_assessment_call
+from .validation import validate_call_artifacts
 
 
 def main() -> None:
@@ -47,6 +48,12 @@ def main() -> None:
     list_parser = subparsers.add_parser("list-scenarios", help="List scenario ids.")
     list_parser.add_argument("--verbose", action="store_true")
 
+    validate_parser = subparsers.add_parser(
+        "validate-artifacts",
+        help="Check call artifacts for submission-required files.",
+    )
+    validate_parser.add_argument("--min-calls", type=int, default=10)
+
     args = parser.parse_args()
     try:
         if args.command == "check-env":
@@ -61,6 +68,8 @@ def main() -> None:
             asyncio.run(analyze_transcripts(Path(args.output)))
         elif args.command == "list-scenarios":
             list_scenarios(verbose=args.verbose)
+        elif args.command == "validate-artifacts":
+            validate_artifacts(min_calls=args.min_calls)
     except ConfigError as exc:
         print(f"Configuration error: {exc}", file=sys.stderr)
         sys.exit(2)
@@ -68,6 +77,7 @@ def main() -> None:
 
 def check_env() -> None:
     settings = load_settings()
+    settings.require_supported_voice_provider()
     print("Server readiness:")
     server_missing = missing_for_server(settings)
     print("  OK" if not server_missing else "  Missing: " + ", ".join(server_missing))
@@ -75,7 +85,7 @@ def check_env() -> None:
     call_missing = missing_for_calls(settings)
     print("  OK" if not call_missing else "  Missing: " + ", ".join(call_missing))
     settings.require_safe_call_target()
-    print(f"Assessment target locked to {settings.pg_target_number}")
+    print("Assessment target lock: OK")
 
 
 def serve(reload: bool = False) -> None:
@@ -93,28 +103,11 @@ def call_one(scenario_id: str) -> str:
     settings = load_settings()
     assert_ready_for_calls(settings)
     scenario = get_scenario(scenario_id)
-    client = Client(settings.twilio_account_sid, settings.twilio_auth_token)
-    voice_url = f"{settings.public_base_url}/twilio/voice?scenario={scenario.id}"
-    kwargs = {
-        "to": settings.pg_target_number,
-        "from_": settings.twilio_from_number,
-        "url": voice_url,
-        "method": "POST",
-        "status_callback": f"{settings.public_base_url}/twilio/status",
-        "status_callback_event": ["initiated", "ringing", "answered", "completed"],
-        "status_callback_method": "POST",
-    }
-    if settings.record_calls:
-        kwargs.update(
-            {
-                "record": True,
-                "recording_channels": "dual",
-                "recording_status_callback": f"{settings.public_base_url}/twilio/recording",
-                "recording_status_callback_method": "POST",
-            }
-        )
-    call = client.calls.create(**kwargs)
-    print(f"Started call {call.sid} for scenario {scenario.id}: {scenario.title}")
+    call = start_assessment_call(settings, scenario)
+    print(
+        f"Started {call.provider} call {call.sid} "
+        f"for scenario {scenario.id}: {scenario.title}"
+    )
     return call.sid
 
 
@@ -133,6 +126,21 @@ def list_scenarios(verbose: bool = False) -> None:
             print(f"{scenario.id}: {scenario.title} - {scenario.objective}")
         else:
             print(scenario.id)
+
+
+def validate_artifacts(min_calls: int = 10) -> None:
+    settings = load_settings()
+    result = validate_call_artifacts(settings.artifact_dir, min_calls=min_calls)
+    print(f"Artifact directory: {result.artifact_dir}")
+    print(f"Call directories: {len(result.call_dirs)}")
+    print(f"Structurally complete calls: {len(result.qualifying_call_dirs)}")
+    if result.issues:
+        print("Issues:")
+        for issue in result.issues:
+            prefix = f"{issue.call_dir.name}: " if issue.call_dir else ""
+            print(f"  - {prefix}{issue.message}")
+        raise ConfigError("Call artifacts are not submission-ready.")
+    print("Artifacts structurally complete.")
 
 
 async def analyze_transcripts(output_path: Path) -> None:

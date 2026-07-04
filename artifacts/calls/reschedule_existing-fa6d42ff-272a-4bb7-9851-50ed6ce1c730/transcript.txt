@@ -1,0 +1,34 @@
+Call SID: fa6d42ff-272a-4bb7-9851-50ed6ce1c730
+Scenario: reschedule_existing
+
+[00:05.72] agent: Recorded for quality and training purposes.
+[00:09.45] patient: Hi, I need to move my appointment from Friday to Monday morning.
+[00:10.99] agent: Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?
+[00:14.88] patient: Hi, I need to move my appointment from Friday to Monday morning.
+[00:26.09] agent: I see you're calling from the number we have on file. Am I speaking with Vedant?
+[00:29.96] patient: No, this is Daniel Brooks. I need to reschedule my Friday appointment.
+[00:36.14] agent: Please provide your full name and date of birth.
+[00:39.50] patient: Daniel Brooks, born November 2nd, 1981.
+[00:42.11] agent: I need your
+[00:46.55] patient: I need to reschedule my Friday 3:30 PM appointment to Monday morning before 11 AM.
+[00:48.17] agent: Just to con
+[00:54.94] patient: Just to confirm, my name is Daniel Brooks, DOB 11/02/1981. I have an appointment Friday at 3:30 PM and I want to move it to Monday before 11 AM.
+[00:58.28] agent: I have your name as Daniel Brooks. And your date of birth as 11/02/2009 Is that correct?
+[01:02.58] patient: No, my date of birth is November 2nd, 1981, not 2009.
+[01:04.45] agent: Could you please confirm your full date of birth including the year?
+[01:07.54] patient: Yes, it's November 2nd, 1981.
+[01:15.49] agent: Please tell me your complete date of birth, including the month, day, and year.
+[01:18.34] patient: November 2nd, 1981.
+[01:37.48] agent: Would you like me to look up your record using your phone number? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:41.48] patient: I don't have my phone number handy. Let's just confirm my name and date of birth again.
+[01:53.44] agent: Please spell out your first and last name. And confirm your full date of birth.
+[01:59.64] patient: D-A-N-I-E-L B-R-O-O-K-S, date of birth November 2nd, 1981.
+[02:19.49] agent: I have your name as Daniel Brooks. And your date of birth as 11/02/1981. Is that correct?
+[02:25.72] patient: Yes, that's correct. Now can we move my Friday 3:30 PM appointment to Monday morning before 11 AM?
+[02:50.48] agent: I'm unable to verify your information right now. I can't reschedule your appointment at this moment. I'll make sure our clinic support team follows up with you. Please stay on the line while I document this for our team.
+[02:54.99] patient: I've confirmed my name and date of birth multiple times. Can you please just reschedule my appointment?
+[02:56.32] agent: Connecting you to a representative. Please wait.
+[02:59.27] patient: Okay, I'll wait for the representative.
+[02:59.72] agent: Hello. You've reached the Pretty Good AI test line.
+[03:03.99] patient: Hello? I need to move my Friday 3:30 PM appointment to Monday morning before 11 AM.
+[03:03.99] agent: Goodbye.

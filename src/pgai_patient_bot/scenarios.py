@@ -30,6 +30,7 @@ class Scenario:
             f"Patient profile: {self.patient_profile}\n"
             f"Objective: {self.objective}\n"
             f"Opening line if needed: {self.opening_line}\n"
+            f"Soft turn budget: {self.max_turns} patient replies before politely ending.\n"
             f"Known facts:\n{facts}\n"
             f"Test focus:\n{focus}\n"
             f"Success criteria:\n{criteria}\n"

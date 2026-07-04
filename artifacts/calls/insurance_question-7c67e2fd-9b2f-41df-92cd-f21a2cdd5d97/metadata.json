@@ -1,0 +1,380 @@
+{
+  "call_sid": "7c67e2fd-9b2f-41df-92cd-f21a2cdd5d97",
+  "scenario_id": "insurance_question",
+  "started_at_epoch": 1783138718.265376,
+  "duration_seconds": 210.668,
+  "turns": [
+    {
+      "time": 5.963,
+      "speaker": "agent",
+      "text": "Recorded for quality and training purposes.",
+      "meta": {}
+    },
+    {
+      "time": 9.963,
+      "speaker": "patient",
+      "text": "Hi, before I book, do you take Blue Cross PPO insurance?",
+      "meta": {
+        "reason": "Patient asks the core insurance question as per scenario objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 11.111,
+      "speaker": "agent",
+      "text": "Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 14.721,
+      "speaker": "patient",
+      "text": "Hi, before I book, do you take Blue Cross PPO insurance?",
+      "meta": {
+        "reason": "Repeating the insurance question since the agent did not answer it directly and instead gave a greeting.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 33.26,
+      "speaker": "agent",
+      "text": "Pivot Point Orthopedics accepts most insurance plans. Including many PPO options. I can check your specific coverage and help update your insurance on file if needed.",
+      "meta": {}
+    },
+    {
+      "time": 36.677,
+      "speaker": "patient",
+      "text": "Great, could you please check if my Blue Cross PPO is accepted?",
+      "meta": {
+        "reason": "Patient asks for specific verification of their insurance plan, as the agent offered to check coverage.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 36.677,
+      "speaker": "agent",
+      "text": "You like to continue with that?",
+      "meta": {}
+    },
+    {
+      "time": 40.073,
+      "speaker": "patient",
+      "text": "Yes, please check if my Blue Cross PPO is accepted.",
+      "meta": {
+        "reason": "Patient wants confirmation of insurance acceptance before proceeding.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 46.328,
+      "speaker": "agent",
+      "text": "I see you're calling from the number we have on file.",
+      "meta": {}
+    },
+    {
+      "time": 51.416,
+      "speaker": "patient",
+      "text": "Yes, that's correct. Can you please check if my Blue Cross PPO is accepted?",
+      "meta": {
+        "reason": "Patient confirms the number and repeats the insurance verification request to keep the conversation on track.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 51.417,
+      "speaker": "agent",
+      "text": "I speaking with Vedant?",
+      "meta": {}
+    },
+    {
+      "time": 55.393,
+      "speaker": "patient",
+      "text": "No, this is Priya Miller. Can you check if my Blue Cross PPO is accepted?",
+      "meta": {
+        "reason": "Correcting the agent's mistaken identity and steering back to the insurance verification objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 61.835,
+      "speaker": "agent",
+      "text": "Please provide your full name and date of birth.",
+      "meta": {}
+    },
+    {
+      "time": 66.542,
+      "speaker": "patient",
+      "text": "My name is Priya Miller, date of birth June 30, 1988.",
+      "meta": {
+        "reason": "Patient provides requested info to proceed with insurance verification.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 69.647,
+      "speaker": "agent",
+      "text": "I need your full name and date of birth to look up your information.",
+      "meta": {}
+    },
+    {
+      "time": 73.492,
+      "speaker": "patient",
+      "text": "My name is Priya Miller, DOB 06/30/1988.",
+      "meta": {
+        "reason": "Repeating my name and DOB clearly since the agent seems to need it again to proceed with insurance verification.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 80.151,
+      "speaker": "agent",
+      "text": "I also need your full name to continue. Could you please provide your first and last name?",
+      "meta": {}
+    },
+    {
+      "time": 84.265,
+      "speaker": "patient",
+      "text": "My name is Priya Miller. First name Priya, last name Miller.",
+      "meta": {
+        "reason": "Patient repeats full name clearly to move past the agent's confusion and get the insurance verification.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 99.528,
+      "speaker": "agent",
+      "text": "Thank you. Just to confirm, I have your name as Priya Miller and your date of birth as 06/30/2026. Is that correct?",
+      "meta": {}
+    },
+    {
+      "time": 104.305,
+      "speaker": "patient",
+      "text": "No, my date of birth is June 30, 1988, not 2026.",
+      "meta": {
+        "reason": "Correcting the agent's mistake on my DOB so they can properly check my insurance.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 121.036,
+      "speaker": "agent",
+      "text": "Would you like me to look up your using your phone number on file? If so, please provide the number you have listed with us.",
+      "meta": {}
+    },
+    {
+      "time": 126.861,
+      "speaker": "patient",
+      "text": "My phone number is 555-123-4567. Can you please check if my Blue Cross PPO is accepted?",
+      "meta": {
+        "reason": "Providing phone number as requested to move forward with insurance verification.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 126.862,
+      "speaker": "agent",
+      "text": "If you're not sure, I can confirm your name and date of birth again. Just let me know.",
+      "meta": {}
+    },
+    {
+      "time": 134.961,
+      "speaker": "patient",
+      "text": "I'm sure. My name is Priya Miller, DOB June 30, 1988. Can you please check if you accept Blue Cross PPO?",
+      "meta": {
+        "reason": "The agent seems confused and keeps asking for my name and DOB. I need to firmly restate my correct info and redirect to my insurance question.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 136.801,
+      "speaker": "agent",
+      "text": "Would you like me to look up your record using your",
+      "meta": {}
+    },
+    {
+      "time": 142.824,
+      "speaker": "patient",
+      "text": "Yes, please look up my record and check if Blue Cross PPO is accepted.",
+      "meta": {
+        "reason": "Patient is trying to get the insurance question answered; agent is offering to look up record, so patient agrees to move forward.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 146.812,
+      "speaker": "agent",
+      "text": "please spell out your first and last name. And confirm your date of birth one more time.",
+      "meta": {}
+    },
+    {
+      "time": 153.046,
+      "speaker": "patient",
+      "text": "P-R-I-Y-A M-I-L-L-E-R, date of birth June 30, 1988. Now can you please check if you accept Blue Cross PPO?",
+      "meta": {
+        "reason": "Patient provides the spelling and DOB as requested, then reiterates the insurance question to stay on track.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 154.489,
+      "speaker": "agent",
+      "text": "I need to confirm your information before checking your insurance.",
+      "meta": {}
+    },
+    {
+      "time": 159.492,
+      "speaker": "patient",
+      "text": "I've confirmed my name and DOB three times now. Can you please just tell me if you accept Blue Cross PPO?",
+      "meta": {
+        "reason": "Patient is frustrated with repeated identity confirmation and wants a direct answer about insurance acceptance.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 159.493,
+      "speaker": "agent",
+      "text": "Please spell out your first and last name and confirm your date of birth.",
+      "meta": {}
+    },
+    {
+      "time": 165.547,
+      "speaker": "patient",
+      "text": "P-R-I-Y-A M-I-L-L-E-R, June 30, 1988. Now please answer: do you accept Blue Cross PPO?",
+      "meta": {
+        "reason": "Patient is frustrated but complies again to get the insurance answer.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 190.965,
+      "speaker": "agent",
+      "text": "I have your name as Priya Miller. Date of birth, 06/30/1988. And your phone number as (781) 323-0490.",
+      "meta": {}
+    },
+    {
+      "time": 195.112,
+      "speaker": "patient",
+      "text": "Great, thanks. Now can you please tell me if you accept Blue Cross PPO?",
+      "meta": {
+        "reason": "The agent has finally confirmed my identity; now I need to get the insurance answer to complete my objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 195.113,
+      "speaker": "agent",
+      "text": "Is all of that correct?",
+      "meta": {}
+    },
+    {
+      "time": 199.477,
+      "speaker": "patient",
+      "text": "Yes, that's all correct. Now please tell me, do you accept Blue Cross PPO?",
+      "meta": {
+        "reason": "Confirming the info to move past verification and finally get an answer about insurance acceptance.",
+        "end_call": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "time": 0.001,
+      "event": "signalwire_start",
+      "payload": {
+        "streamSid": "a2b51ef9-8b40-4d99-93c3-8a59af709dfa",
+        "accountSid": "88c611f8-76aa-4b3d-8b9c-a45c093871c7",
+        "callSid": "7c67e2fd-9b2f-41df-92cd-f21a2cdd5d97",
+        "tracks": [
+          "inbound"
+        ],
+        "mediaFormat": {
+          "encoding": "audio/x-mulaw",
+          "sampleRate": 8000,
+          "channels": 1
+        }
+      }
+    },
+    {
+      "time": 11.111,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 36.678,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 51.417,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 69.647,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 126.862,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 136.802,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 146.812,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 154.49,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 159.493,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 195.113,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 210.002,
+      "event": "max_call_seconds_reached",
+      "payload": {}
+    },
+    {
+      "time": 210.581,
+      "event": "signalwire_stop",
+      "payload": {
+        "event": "stop",
+        "sequenceNumber": "10552"
+      }
+    }
+  ]
+}

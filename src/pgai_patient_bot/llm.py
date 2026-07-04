@@ -75,7 +75,8 @@ class PatientBrain:
             reason = "Model returned non-JSON; used first line as fallback."
         if not utterance:
             utterance = "Sorry, could you say that one more time?"
-        return PatientReply(utterance=utterance, end_call=end_call, reason=reason)
+        reply = PatientReply(utterance=utterance, end_call=end_call, reason=reason)
+        return _force_end_after_turn_budget(scenario, transcript, reply)
 
 
 class TranscriptAnalyzer:
@@ -90,3 +91,21 @@ class TranscriptAnalyzer:
             ],
             temperature=0.2,
         )
+
+
+def _force_end_after_turn_budget(
+    scenario: Scenario,
+    transcript: list[dict[str, str]],
+    reply: PatientReply,
+) -> PatientReply:
+    patient_turns = sum(1 for turn in transcript if turn.get("speaker") == "patient")
+    if reply.end_call or patient_turns < scenario.max_turns:
+        return reply
+    text = reply.utterance.strip()
+    if "goodbye" not in text.lower():
+        text = f"{text} Thank you, goodbye."
+    return PatientReply(
+        utterance=text,
+        end_call=True,
+        reason=f"{reply.reason} Forced polite end after scenario turn budget.".strip(),
+    )

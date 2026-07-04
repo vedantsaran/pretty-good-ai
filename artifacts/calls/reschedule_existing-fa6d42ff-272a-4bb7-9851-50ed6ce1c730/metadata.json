@@ -1,0 +1,322 @@
+{
+  "call_sid": "fa6d42ff-272a-4bb7-9851-50ed6ce1c730",
+  "scenario_id": "reschedule_existing",
+  "started_at_epoch": 1783138015.69789,
+  "duration_seconds": 185.613,
+  "turns": [
+    {
+      "time": 5.721,
+      "speaker": "agent",
+      "text": "Recorded for quality and training purposes.",
+      "meta": {}
+    },
+    {
+      "time": 9.452,
+      "speaker": "patient",
+      "text": "Hi, I need to move my appointment from Friday to Monday morning.",
+      "meta": {
+        "reason": "Patient initiates the reschedule request as per scenario opening line.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 10.993,
+      "speaker": "agent",
+      "text": "Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 14.881,
+      "speaker": "patient",
+      "text": "Hi, I need to move my appointment from Friday to Monday morning.",
+      "meta": {
+        "reason": "Repeating the objective clearly since the agent didn't acknowledge the reschedule request yet.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 26.085,
+      "speaker": "agent",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Vedant?",
+      "meta": {}
+    },
+    {
+      "time": 29.962,
+      "speaker": "patient",
+      "text": "No, this is Daniel Brooks. I need to reschedule my Friday appointment.",
+      "meta": {
+        "reason": "Correcting the agent's mistaken identity and restating the rescheduling request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 36.138,
+      "speaker": "agent",
+      "text": "Please provide your full name and date of birth.",
+      "meta": {}
+    },
+    {
+      "time": 39.501,
+      "speaker": "patient",
+      "text": "Daniel Brooks, born November 2nd, 1981.",
+      "meta": {
+        "reason": "Providing the requested identifying information to proceed with the reschedule.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 42.109,
+      "speaker": "agent",
+      "text": "I need your",
+      "meta": {}
+    },
+    {
+      "time": 46.554,
+      "speaker": "patient",
+      "text": "I need to reschedule my Friday 3:30 PM appointment to Monday morning before 11 AM.",
+      "meta": {
+        "reason": "Providing the missing info the agent asked for and stating the rescheduling request clearly.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 48.169,
+      "speaker": "agent",
+      "text": "Just to con",
+      "meta": {}
+    },
+    {
+      "time": 54.944,
+      "speaker": "patient",
+      "text": "Just to confirm, my name is Daniel Brooks, DOB 11/02/1981. I have an appointment Friday at 3:30 PM and I want to move it to Monday before 11 AM.",
+      "meta": {
+        "reason": "Providing clear confirmation details to help the agent proceed with rescheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 58.28,
+      "speaker": "agent",
+      "text": "I have your name as Daniel Brooks. And your date of birth as 11/02/2009 Is that correct?",
+      "meta": {}
+    },
+    {
+      "time": 62.575,
+      "speaker": "patient",
+      "text": "No, my date of birth is November 2nd, 1981, not 2009.",
+      "meta": {
+        "reason": "Correcting the agent's mistaken date of birth to proceed with the reschedule.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 64.449,
+      "speaker": "agent",
+      "text": "Could you please confirm your full date of birth including the year?",
+      "meta": {}
+    },
+    {
+      "time": 67.541,
+      "speaker": "patient",
+      "text": "Yes, it's November 2nd, 1981.",
+      "meta": {
+        "reason": "Correcting the agent's mistaken date of birth entry to proceed with rescheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 75.488,
+      "speaker": "agent",
+      "text": "Please tell me your complete date of birth, including the month, day, and year.",
+      "meta": {}
+    },
+    {
+      "time": 78.338,
+      "speaker": "patient",
+      "text": "November 2nd, 1981.",
+      "meta": {
+        "reason": "Repeating the correct DOB to get past verification and proceed with rescheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 97.484,
+      "speaker": "agent",
+      "text": "Would you like me to look up your record using your phone number? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?",
+      "meta": {}
+    },
+    {
+      "time": 101.481,
+      "speaker": "patient",
+      "text": "I don't have my phone number handy. Let's just confirm my name and date of birth again.",
+      "meta": {
+        "reason": "Patient wants to stick with name and DOB verification to get to rescheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 113.436,
+      "speaker": "agent",
+      "text": "Please spell out your first and last name. And confirm your full date of birth.",
+      "meta": {}
+    },
+    {
+      "time": 119.638,
+      "speaker": "patient",
+      "text": "D-A-N-I-E-L B-R-O-O-K-S, date of birth November 2nd, 1981.",
+      "meta": {
+        "reason": "Providing the requested spelling and DOB to move past identity verification and get to the rescheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 139.485,
+      "speaker": "agent",
+      "text": "I have your name as Daniel Brooks. And your date of birth as 11/02/1981. Is that correct?",
+      "meta": {}
+    },
+    {
+      "time": 145.715,
+      "speaker": "patient",
+      "text": "Yes, that's correct. Now can we move my Friday 3:30 PM appointment to Monday morning before 11 AM?",
+      "meta": {
+        "reason": "Confirming identity and steering back to the rescheduling objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 170.482,
+      "speaker": "agent",
+      "text": "I'm unable to verify your information right now. I can't reschedule your appointment at this moment. I'll make sure our clinic support team follows up with you. Please stay on the line while I document this for our team.",
+      "meta": {}
+    },
+    {
+      "time": 174.985,
+      "speaker": "patient",
+      "text": "I've confirmed my name and date of birth multiple times. Can you please just reschedule my appointment?",
+      "meta": {
+        "reason": "Patient is frustrated but still trying to get the agent to complete the reschedule as the objective is not yet achieved.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 176.321,
+      "speaker": "agent",
+      "text": "Connecting you to a representative. Please wait.",
+      "meta": {}
+    },
+    {
+      "time": 179.269,
+      "speaker": "patient",
+      "text": "Okay, I'll wait for the representative.",
+      "meta": {
+        "reason": "Patient cannot proceed further with this agent; waiting for human representative as instructed.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 179.719,
+      "speaker": "agent",
+      "text": "Hello. You've reached the Pretty Good AI test line.",
+      "meta": {}
+    },
+    {
+      "time": 183.986,
+      "speaker": "patient",
+      "text": "Hello? I need to move my Friday 3:30 PM appointment to Monday morning before 11 AM.",
+      "meta": {
+        "reason": "Restating the request clearly to the new representative to continue the rescheduling process.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 183.986,
+      "speaker": "agent",
+      "text": "Goodbye.",
+      "meta": {}
+    }
+  ],
+  "events": [
+    {
+      "time": 0.001,
+      "event": "signalwire_start",
+      "payload": {
+        "streamSid": "46a5d139-e737-4bc9-a102-0061b27cd6df",
+        "accountSid": "88c611f8-76aa-4b3d-8b9c-a45c093871c7",
+        "callSid": "fa6d42ff-272a-4bb7-9851-50ed6ce1c730",
+        "tracks": [
+          "inbound"
+        ],
+        "mediaFormat": {
+          "encoding": "audio/x-mulaw",
+          "sampleRate": 8000,
+          "channels": 1
+        }
+      }
+    },
+    {
+      "time": 10.994,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 42.11,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 48.169,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 58.281,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 64.45,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 176.322,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 179.72,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 183.987,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 185.469,
+      "event": "signalwire_stop",
+      "payload": {
+        "event": "stop",
+        "sequenceNumber": "9286"
+      }
+    }
+  ]
+}

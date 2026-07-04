@@ -34,9 +34,14 @@ def _env_bool(name: str, default: bool) -> bool:
 
 @dataclass(frozen=True)
 class Settings:
+    voice_provider: str
     twilio_account_sid: str
     twilio_auth_token: str
     twilio_from_number: str
+    signalwire_project_id: str
+    signalwire_api_token: str
+    signalwire_space_url: str
+    signalwire_from_number: str
     public_base_url: str
     pg_target_number: str
     deepgram_api_key: str
@@ -52,6 +57,16 @@ class Settings:
     max_call_seconds: int
     record_calls: bool
 
+    def require_supported_voice_provider(self) -> None:
+        if self.voice_provider not in {"twilio", "signalwire"}:
+            raise ConfigError("VOICE_PROVIDER must be either 'twilio' or 'signalwire'.")
+
+    @property
+    def caller_from_number(self) -> str:
+        if self.voice_provider == "signalwire":
+            return self.signalwire_from_number
+        return self.twilio_from_number
+
     @property
     def public_ws_base_url(self) -> str:
         if self.public_base_url.startswith("https://"):
@@ -63,8 +78,8 @@ class Settings:
     def require_safe_call_target(self) -> None:
         if normalize_e164(self.pg_target_number) != ASSESSMENT_NUMBER:
             raise ConfigError(
-                f"Refusing to call {self.pg_target_number}. "
-                f"This assessment bot is locked to {ASSESSMENT_NUMBER}."
+                "Refusing to call the configured target. "
+                "This assessment bot is locked to the official assessment number."
             )
 
 
@@ -74,12 +89,19 @@ def load_settings(env_file: str | Path | None = ".env") -> Settings:
 
     target = normalize_e164(os.getenv("PG_TARGET_NUMBER", ASSESSMENT_NUMBER))
     from_number = normalize_e164(os.getenv("TWILIO_FROM_NUMBER", ""))
+    signalwire_from_number = normalize_e164(os.getenv("SIGNALWIRE_FROM_NUMBER", ""))
     public_base_url = os.getenv("PUBLIC_BASE_URL", "").strip().rstrip("/")
+    signalwire_space_url = _normalize_signalwire_space_url(os.getenv("SIGNALWIRE_SPACE_URL", ""))
 
     return Settings(
+        voice_provider=os.getenv("VOICE_PROVIDER", "twilio").strip().lower(),
         twilio_account_sid=os.getenv("TWILIO_ACCOUNT_SID", "").strip(),
         twilio_auth_token=os.getenv("TWILIO_AUTH_TOKEN", "").strip(),
         twilio_from_number=from_number,
+        signalwire_project_id=os.getenv("SIGNALWIRE_PROJECT_ID", "").strip(),
+        signalwire_api_token=os.getenv("SIGNALWIRE_API_TOKEN", "").strip(),
+        signalwire_space_url=signalwire_space_url,
+        signalwire_from_number=signalwire_from_number,
         public_base_url=public_base_url,
         pg_target_number=target,
         deepgram_api_key=os.getenv("DEEPGRAM_API_KEY", "").strip(),
@@ -101,6 +123,13 @@ def load_settings(env_file: str | Path | None = ".env") -> Settings:
     )
 
 
+def _normalize_signalwire_space_url(value: str) -> str:
+    value = value.strip().removeprefix("https://").removeprefix("http://").strip("/")
+    if value and "." not in value:
+        return f"{value}.signalwire.com"
+    return value
+
+
 def missing_for_server(settings: Settings) -> list[str]:
     required = {
         "PUBLIC_BASE_URL": settings.public_base_url,
@@ -112,17 +141,34 @@ def missing_for_server(settings: Settings) -> list[str]:
 
 def missing_for_calls(settings: Settings) -> list[str]:
     required = {
-        "TWILIO_ACCOUNT_SID": settings.twilio_account_sid,
-        "TWILIO_AUTH_TOKEN": settings.twilio_auth_token,
-        "TWILIO_FROM_NUMBER": settings.twilio_from_number,
         "PUBLIC_BASE_URL": settings.public_base_url,
         "DEEPGRAM_API_KEY": settings.deepgram_api_key,
         "DEEPSEEK_API_KEY": settings.deepseek_api_key,
     }
+    if settings.voice_provider == "twilio":
+        required.update(
+            {
+                "TWILIO_ACCOUNT_SID": settings.twilio_account_sid,
+                "TWILIO_AUTH_TOKEN": settings.twilio_auth_token,
+                "TWILIO_FROM_NUMBER": settings.twilio_from_number,
+            }
+        )
+    elif settings.voice_provider == "signalwire":
+        required.update(
+            {
+                "SIGNALWIRE_PROJECT_ID": settings.signalwire_project_id,
+                "SIGNALWIRE_API_TOKEN": settings.signalwire_api_token,
+                "SIGNALWIRE_SPACE_URL": settings.signalwire_space_url,
+                "SIGNALWIRE_FROM_NUMBER": settings.signalwire_from_number,
+            }
+        )
+    else:
+        required["VOICE_PROVIDER"] = ""
     return [name for name, value in required.items() if not value]
 
 
 def assert_ready_for_server(settings: Settings) -> None:
+    settings.require_supported_voice_provider()
     settings.require_safe_call_target()
     missing = missing_for_server(settings)
     if missing:
@@ -130,6 +176,7 @@ def assert_ready_for_server(settings: Settings) -> None:
 
 
 def assert_ready_for_calls(settings: Settings) -> None:
+    settings.require_supported_voice_provider()
     settings.require_safe_call_target()
     missing = missing_for_calls(settings)
     if missing:

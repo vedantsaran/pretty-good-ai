@@ -1,0 +1,247 @@
+{
+  "call_sid": "e5c78a6e-ad6b-41dc-ae6f-fb8653404831",
+  "scenario_id": "location_parking",
+  "started_at_epoch": 1783139229.905306,
+  "duration_seconds": 87.656,
+  "turns": [
+    {
+      "time": 4.924,
+      "speaker": "agent",
+      "text": "Recorded for quality and training purposes.",
+      "meta": {}
+    },
+    {
+      "time": 8.707,
+      "speaker": "patient",
+      "text": "Hi, where is your office, and is there accessible parking?",
+      "meta": {
+        "reason": "Patient starts with the core objective: asking for location and accessible parking.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 10.941,
+      "speaker": "agent",
+      "text": "Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 18.419,
+      "speaker": "patient",
+      "text": "Hi, I'm Elena Garcia. I have an appointment next Wednesday. Where is your office located, and do you have accessible parking?",
+      "meta": {
+        "reason": "Repeating the objective clearly since the agent gave a generic greeting and didn't answer yet.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 20.383,
+      "speaker": "agent",
+      "text": "Our office is called Pivot Point Orthopaedics. The address is 1234 Recovery Way, Suite 200, Aus",
+      "meta": {}
+    },
+    {
+      "time": 24.698,
+      "speaker": "patient",
+      "text": "And is there accessible parking available at that address?",
+      "meta": {
+        "reason": "The agent gave the address but didn't answer the parking question yet. Need to confirm accessibility before the objective is complete.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 25.569,
+      "speaker": "agent",
+      "text": "hi, Elena. How can I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 29.926,
+      "speaker": "patient",
+      "text": "I already asked \u2014 where is your office located, and do you have accessible parking?",
+      "meta": {
+        "reason": "The agent seems to have forgotten my previous request. I repeat my core question to keep the conversation on track.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 33.957,
+      "speaker": "agent",
+      "text": "Could you please finish your",
+      "meta": {}
+    },
+    {
+      "time": 39.996,
+      "speaker": "patient",
+      "text": "I need the full office address and to know if you have accessible parking spots.",
+      "meta": {
+        "reason": "The agent cut off mid-sentence. I repeat the core request clearly to move the conversation forward.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 46.069,
+      "speaker": "agent",
+      "text": "Our office is at 1234",
+      "meta": {}
+    },
+    {
+      "time": 50.412,
+      "speaker": "patient",
+      "text": "1234 what? Please give me the full address and tell me about accessible parking.",
+      "meta": {
+        "reason": "Agent cut off mid-address. Need complete address and parking info to satisfy scenario objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 55.884,
+      "speaker": "agent",
+      "text": "The full address is Pivot Point Orthopedics. 1234 Recovery Way, Suite 2.",
+      "meta": {}
+    },
+    {
+      "time": 59.718,
+      "speaker": "patient",
+      "text": "Thank you. And do you have accessible parking spots near the entrance?",
+      "meta": {
+        "reason": "Still need answer about accessible parking, which is the second part of the objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 62.165,
+      "speaker": "agent",
+      "text": "The full address is Pivot Point Orthopaedics. 1234",
+      "meta": {}
+    },
+    {
+      "time": 66.729,
+      "speaker": "patient",
+      "text": "I need to know if you have accessible parking. Can you check or transfer me to someone who can help?",
+      "meta": {
+        "reason": "Agent keeps repeating partial address and ignoring the accessibility question. Asking for escalation or check to get a real answer.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 69.082,
+      "speaker": "agent",
+      "text": "Go ahead with your",
+      "meta": {}
+    },
+    {
+      "time": 74.05,
+      "speaker": "patient",
+      "text": "Please check if there is accessible parking at your office. If you don't know, can you transfer me to someone who does?",
+      "meta": {
+        "reason": "Patient is repeating the accessible parking question because the agent keeps giving incomplete address and ignoring the parking concern. Asking for transfer to get a definitive answer.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 76.687,
+      "speaker": "agent",
+      "text": "Yes. There are accessible parking spots available in the surface lot in front of the building.",
+      "meta": {}
+    },
+    {
+      "time": 82.443,
+      "speaker": "patient",
+      "text": "Perfect, thank you. That answers my questions.",
+      "meta": {
+        "reason": "Objective achieved: agent provided address and confirmed accessible parking. Ending call politely.",
+        "end_call": true
+      }
+    },
+    {
+      "time": 84.164,
+      "speaker": "agent",
+      "text": "Yes. We have accessible parts",
+      "meta": {}
+    }
+  ],
+  "events": [
+    {
+      "time": 0.001,
+      "event": "signalwire_start",
+      "payload": {
+        "streamSid": "a64fb04a-4531-4fca-b789-e40ceffc082d",
+        "accountSid": "88c611f8-76aa-4b3d-8b9c-a45c093871c7",
+        "callSid": "e5c78a6e-ad6b-41dc-ae6f-fb8653404831",
+        "tracks": [
+          "inbound"
+        ],
+        "mediaFormat": {
+          "encoding": "audio/x-mulaw",
+          "sampleRate": 8000,
+          "channels": 1
+        }
+      }
+    },
+    {
+      "time": 10.941,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 20.383,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 25.57,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 33.958,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 62.166,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 69.083,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 76.688,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 84.164,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 87.611,
+      "event": "signalwire_stop",
+      "payload": {
+        "event": "stop",
+        "sequenceNumber": "4396"
+      }
+    }
+  ]
+}

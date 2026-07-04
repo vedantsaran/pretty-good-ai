@@ -1,0 +1,24 @@
+Call SID: e5c78a6e-ad6b-41dc-ae6f-fb8653404831
+Scenario: location_parking
+
+[00:04.92] agent: Recorded for quality and training purposes.
+[00:08.71] patient: Hi, where is your office, and is there accessible parking?
+[00:10.94] agent: Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?
+[00:18.42] patient: Hi, I'm Elena Garcia. I have an appointment next Wednesday. Where is your office located, and do you have accessible parking?
+[00:20.38] agent: Our office is called Pivot Point Orthopaedics. The address is 1234 Recovery Way, Suite 200, Aus
+[00:24.70] patient: And is there accessible parking available at that address?
+[00:25.57] agent: hi, Elena. How can I help you today?
+[00:29.93] patient: I already asked — where is your office located, and do you have accessible parking?
+[00:33.96] agent: Could you please finish your
+[00:40.00] patient: I need the full office address and to know if you have accessible parking spots.
+[00:46.07] agent: Our office is at 1234
+[00:50.41] patient: 1234 what? Please give me the full address and tell me about accessible parking.
+[00:55.88] agent: The full address is Pivot Point Orthopedics. 1234 Recovery Way, Suite 2.
+[00:59.72] patient: Thank you. And do you have accessible parking spots near the entrance?
+[01:02.16] agent: The full address is Pivot Point Orthopaedics. 1234
+[01:06.73] patient: I need to know if you have accessible parking. Can you check or transfer me to someone who can help?
+[01:09.08] agent: Go ahead with your
+[01:14.05] patient: Please check if there is accessible parking at your office. If you don't know, can you transfer me to someone who does?
+[01:16.69] agent: Yes. There are accessible parking spots available in the surface lot in front of the building.
+[01:22.44] patient: Perfect, thank you. That answers my questions.
+[01:24.16] agent: Yes. We have accessible parts

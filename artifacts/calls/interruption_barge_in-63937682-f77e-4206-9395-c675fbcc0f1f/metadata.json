@@ -1,0 +1,234 @@
+{
+  "call_sid": "63937682-f77e-4206-9395-c675fbcc0f1f",
+  "scenario_id": "interruption_barge_in",
+  "started_at_epoch": 1783139715.006721,
+  "duration_seconds": 145.534,
+  "turns": [
+    {
+      "time": 5.74,
+      "speaker": "agent",
+      "text": "Corded for quality and training purposes.",
+      "meta": {}
+    },
+    {
+      "time": 8.307,
+      "speaker": "patient",
+      "text": "Hi, I need to book an appointment.",
+      "meta": {
+        "reason": "Opening the call as per scenario; preparing to interrupt with correction when agent mentions physical.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 11.86,
+      "speaker": "agent",
+      "text": "Thanks for calling Pivot Point Orthopaedics, part of Pretty Good A. How may I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 15.565,
+      "speaker": "patient",
+      "text": "Hi, I need to book an appointment. Actually, wait, it is not a physical.",
+      "meta": {
+        "reason": "Patient initiates booking request and immediately corrects the appointment type to sick visit, as per scenario objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 31.193,
+      "speaker": "agent",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Fadan?",
+      "meta": {}
+    },
+    {
+      "time": 34.944,
+      "speaker": "patient",
+      "text": "No, this is Sam Taylor.",
+      "meta": {
+        "reason": "Correcting the agent's mistaken identity and providing my name.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 41.019,
+      "speaker": "agent",
+      "text": "Could you please provide your full name and date of birth?",
+      "meta": {}
+    },
+    {
+      "time": 44.828,
+      "speaker": "patient",
+      "text": "Sam Taylor, date of birth September 27, 1978.",
+      "meta": {
+        "reason": "Providing the requested identifying information so the agent can look up the patient record.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 64.819,
+      "speaker": "agent",
+      "text": "Just to confirm, I have your name as Sam Taylor. And your date of birth as 09/27/1978. Is that correct? If so, could you please spell your first and last name for me?",
+      "meta": {}
+    },
+    {
+      "time": 70.276,
+      "speaker": "patient",
+      "text": "Yes, that's correct. S-A-M T-A-Y-L-O-R. But I need a sick visit, not a physical.",
+      "meta": {
+        "reason": "Confirming identity while repeating the correction to ensure agent switches appointment type.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 86.348,
+      "speaker": "agent",
+      "text": "Thanks for spelling your last name. Could you please spell your first name as well? This will help me find your record.",
+      "meta": {}
+    },
+    {
+      "time": 90.653,
+      "speaker": "patient",
+      "text": "I already spelled it: S-A-M. Please book a sick visit for a cough tomorrow afternoon.",
+      "meta": {
+        "reason": "Patient has already provided spelling and is redirecting to the correction objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 98.358,
+      "speaker": "agent",
+      "text": "Could you please spell your first name for me just to make sure I have it correct?",
+      "meta": {}
+    },
+    {
+      "time": 102.704,
+      "speaker": "patient",
+      "text": "S-A-M. Now can we please book a sick visit for tomorrow afternoon?",
+      "meta": {
+        "reason": "Patient complies with spelling request again to move past verification, then redirects to the objective of booking a sick visit.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 104.695,
+      "speaker": "agent",
+      "text": "Thank you. Could you please spell out the rest of your first name?",
+      "meta": {}
+    },
+    {
+      "time": 109.566,
+      "speaker": "patient",
+      "text": "My first name is just S-A-M, three letters. Please focus on booking my sick visit for tomorrow afternoon.",
+      "meta": {
+        "reason": "Patient corrects agent's confusion about name spelling and redirects to the appointment booking objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 112.139,
+      "speaker": "agent",
+      "text": "I need the full spelling of your first name to continue. Could you please spell it out completely?",
+      "meta": {}
+    },
+    {
+      "time": 116.655,
+      "speaker": "patient",
+      "text": "S-A-M. That is my full first name. Can we please move on to booking my sick visit?",
+      "meta": {
+        "reason": "Patient has spelled first name twice already, agent is stuck. Repeating clearly and redirecting to the appointment booking objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 122.574,
+      "speaker": "agent",
+      "text": "I have your phone number as 7813 I",
+      "meta": {}
+    },
+    {
+      "time": 126.452,
+      "speaker": "patient",
+      "text": "I didn't give you my phone number. Please just book a sick visit for tomorrow afternoon.",
+      "meta": {
+        "reason": "Agent is stuck on spelling and now giving incorrect info; redirecting to the objective of booking a sick visit.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 136.423,
+      "speaker": "agent",
+      "text": "I can't proceed further right now.",
+      "meta": {}
+    },
+    {
+      "time": 140.34,
+      "speaker": "patient",
+      "text": "Can you transfer me to someone who can help book a sick visit? Thank you, goodbye.",
+      "meta": {
+        "reason": "Agent is stuck on spelling and phone number. Requesting transfer to move toward booking the sick visit. Forced polite end after scenario turn budget.",
+        "end_call": true
+      }
+    },
+    {
+      "time": 142.397,
+      "speaker": "agent",
+      "text": "I can make sure our clinic support team follows up with you. Please hold while I document your request.",
+      "meta": {}
+    }
+  ],
+  "events": [
+    {
+      "time": 0.001,
+      "event": "signalwire_start",
+      "payload": {
+        "streamSid": "3527464f-6c32-418e-8922-00a7f0d8084d",
+        "accountSid": "88c611f8-76aa-4b3d-8b9c-a45c093871c7",
+        "callSid": "63937682-f77e-4206-9395-c675fbcc0f1f",
+        "tracks": [
+          "inbound"
+        ],
+        "mediaFormat": {
+          "encoding": "audio/x-mulaw",
+          "sampleRate": 8000,
+          "channels": 1
+        }
+      }
+    },
+    {
+      "time": 104.696,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 112.139,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 122.574,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 142.398,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 145.49,
+      "event": "signalwire_stop",
+      "payload": {
+        "event": "stop",
+        "sequenceNumber": "7286"
+      }
+    }
+  ]
+}

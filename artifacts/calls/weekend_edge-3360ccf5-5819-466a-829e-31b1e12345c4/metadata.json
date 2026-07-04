@@ -1,0 +1,266 @@
+{
+  "call_sid": "3360ccf5-5819-466a-829e-31b1e12345c4",
+  "scenario_id": "weekend_edge",
+  "started_at_epoch": 1783138960.635068,
+  "duration_seconds": 171.925,
+  "turns": [
+    {
+      "time": 5.709,
+      "speaker": "agent",
+      "text": "Recorded for quality and training purposes.",
+      "meta": {}
+    },
+    {
+      "time": 9.28,
+      "speaker": "patient",
+      "text": "Hi, can I come in this Sunday at 10 in the morning?",
+      "meta": {
+        "reason": "Patient initiates the call with the requested Sunday time to test if the agent enforces office-hours constraints.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 14.714,
+      "speaker": "agent",
+      "text": "Thanks for calling Pivot Point Orthopaedics, part of Pretty Good a How may I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 18.913,
+      "speaker": "patient",
+      "text": "Hi, can I come in this Sunday at 10 in the morning?",
+      "meta": {
+        "reason": "Repeating the objective since the agent's greeting didn't address the scheduling request yet.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 22.377,
+      "speaker": "agent",
+      "text": "The clinic is open Monday through Friday, so we're closed on Sundays. Would you like to look for an appointment",
+      "meta": {}
+    },
+    {
+      "time": 25.494,
+      "speaker": "patient",
+      "text": "Yes, what do you have on Monday morning?",
+      "meta": {
+        "reason": "Patient accepts the closed-hours constraint and asks for a valid weekday alternative to test the agent's scheduling offer.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 27.037,
+      "speaker": "agent",
+      "text": "The clinic is closed on Sundays. We're",
+      "meta": {}
+    },
+    {
+      "time": 30.426,
+      "speaker": "patient",
+      "text": "Yes, what do you have on Monday morning?",
+      "meta": {
+        "reason": "Patient accepts the closed-hours constraint and asks for a valid weekday alternative, testing the agent's ability to offer a specific appointment time.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 40.882,
+      "speaker": "agent",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Fadat?",
+      "meta": {}
+    },
+    {
+      "time": 43.569,
+      "speaker": "patient",
+      "text": "No, this is Chris Jordan.",
+      "meta": {
+        "reason": "Correcting the agent's mistaken identity to proceed with scheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 50.192,
+      "speaker": "agent",
+      "text": "Please provide your date of birth.",
+      "meta": {}
+    },
+    {
+      "time": 55.918,
+      "speaker": "patient",
+      "text": "January 22, 1990.",
+      "meta": {
+        "reason": "Providing date of birth as requested to move forward with scheduling a Monday morning appointment.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 68.128,
+      "speaker": "agent",
+      "text": "Can you please spell your first and last name to make sure I have it correct?",
+      "meta": {}
+    },
+    {
+      "time": 71.765,
+      "speaker": "patient",
+      "text": "C-H-R-I-S, J-O-R-D-A-N.",
+      "meta": {
+        "reason": "Patient provides spelling as requested to proceed with scheduling.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 93.85,
+      "speaker": "agent",
+      "text": "Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?",
+      "meta": {}
+    },
+    {
+      "time": 98.508,
+      "speaker": "patient",
+      "text": "Let's just use my name and date of birth again. Chris Jordan, January 22, 1990.",
+      "meta": {
+        "reason": "Providing the info already given to move past identity verification and get back to scheduling a Monday morning appointment.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 100.936,
+      "speaker": "agent",
+      "text": "We",
+      "meta": {}
+    },
+    {
+      "time": 104.279,
+      "speaker": "patient",
+      "text": "Yes, what do you have on Monday morning?",
+      "meta": {
+        "reason": "Patient is following up on the agent's offer for an alternative weekday appointment, specifically Monday morning, to test if the agent provides a valid alternative after the Sunday rejection.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 109.052,
+      "speaker": "agent",
+      "text": "please spell your first and last name for me one more time. Just to be sure?",
+      "meta": {}
+    },
+    {
+      "time": 113.509,
+      "speaker": "patient",
+      "text": "C-H-R-I-S, J-O-R-D-A-N. Can you check Monday morning for me?",
+      "meta": {
+        "reason": "Patient provides spelling again and pushes for the Monday morning alternative after Sunday was rejected.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 120.776,
+      "speaker": "agent",
+      "text": "And can you please spell your last name as well?",
+      "meta": {}
+    },
+    {
+      "time": 125.747,
+      "speaker": "patient",
+      "text": "J-O-R-D-A-N. Can you please check Monday morning availability?",
+      "meta": {
+        "reason": "Patient spells last name again and pushes for Monday morning alternative after Sunday was rejected.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 146.239,
+      "speaker": "agent",
+      "text": "I have your phone number as (781) 323-0490 and your date of birth as 01/22/1990. Is that correct?",
+      "meta": {}
+    },
+    {
+      "time": 150.229,
+      "speaker": "patient",
+      "text": "Yes, that's correct. Can you check Monday morning availability?",
+      "meta": {
+        "reason": "Confirming details to move forward and asking about Monday morning as fallback.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 163.344,
+      "speaker": "agent",
+      "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+      "meta": {}
+    },
+    {
+      "time": 167.104,
+      "speaker": "patient",
+      "text": "Okay, thank you. Please have them call me back about Monday morning.",
+      "meta": {
+        "reason": "Agent cannot proceed further; objective partially met (Sunday not confirmed, no alternative given). Ending call politely.",
+        "end_call": true
+      }
+    },
+    {
+      "time": 167.122,
+      "speaker": "agent",
+      "text": "Would you like me to have them contact you about Monday morning availability?",
+      "meta": {}
+    },
+    {
+      "time": 170.47,
+      "speaker": "patient",
+      "text": "Yes, please have them call me about Monday morning.",
+      "meta": {
+        "reason": "Patient objective achieved: agent did not confirm Sunday and offered a valid alternative (Monday morning follow-up). Ending call politely.",
+        "end_call": true
+      }
+    }
+  ],
+  "events": [
+    {
+      "time": 0.001,
+      "event": "signalwire_start",
+      "payload": {
+        "streamSid": "4a7520ec-584e-470e-a180-bb3598d23838",
+        "accountSid": "88c611f8-76aa-4b3d-8b9c-a45c093871c7",
+        "callSid": "3360ccf5-5819-466a-829e-31b1e12345c4",
+        "tracks": [
+          "inbound"
+        ],
+        "mediaFormat": {
+          "encoding": "audio/x-mulaw",
+          "sampleRate": 8000,
+          "channels": 1
+        }
+      }
+    },
+    {
+      "time": 27.037,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 100.937,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 167.122,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 171.845,
+      "event": "signalwire_stop",
+      "payload": {
+        "event": "stop",
+        "sequenceNumber": "8617"
+      }
+    }
+  ]
+}

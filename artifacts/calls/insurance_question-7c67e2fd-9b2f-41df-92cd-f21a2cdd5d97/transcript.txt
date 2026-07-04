@@ -1,0 +1,39 @@
+Call SID: 7c67e2fd-9b2f-41df-92cd-f21a2cdd5d97
+Scenario: insurance_question
+
+[00:05.96] agent: Recorded for quality and training purposes.
+[00:09.96] patient: Hi, before I book, do you take Blue Cross PPO insurance?
+[00:11.11] agent: Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?
+[00:14.72] patient: Hi, before I book, do you take Blue Cross PPO insurance?
+[00:33.26] agent: Pivot Point Orthopedics accepts most insurance plans. Including many PPO options. I can check your specific coverage and help update your insurance on file if needed.
+[00:36.68] patient: Great, could you please check if my Blue Cross PPO is accepted?
+[00:36.68] agent: You like to continue with that?
+[00:40.07] patient: Yes, please check if my Blue Cross PPO is accepted.
+[00:46.33] agent: I see you're calling from the number we have on file.
+[00:51.42] patient: Yes, that's correct. Can you please check if my Blue Cross PPO is accepted?
+[00:51.42] agent: I speaking with Vedant?
+[00:55.39] patient: No, this is Priya Miller. Can you check if my Blue Cross PPO is accepted?
+[01:01.84] agent: Please provide your full name and date of birth.
+[01:06.54] patient: My name is Priya Miller, date of birth June 30, 1988.
+[01:09.65] agent: I need your full name and date of birth to look up your information.
+[01:13.49] patient: My name is Priya Miller, DOB 06/30/1988.
+[01:20.15] agent: I also need your full name to continue. Could you please provide your first and last name?
+[01:24.27] patient: My name is Priya Miller. First name Priya, last name Miller.
+[01:39.53] agent: Thank you. Just to confirm, I have your name as Priya Miller and your date of birth as 06/30/2026. Is that correct?
+[01:44.31] patient: No, my date of birth is June 30, 1988, not 2026.
+[02:01.04] agent: Would you like me to look up your using your phone number on file? If so, please provide the number you have listed with us.
+[02:06.86] patient: My phone number is 555-123-4567. Can you please check if my Blue Cross PPO is accepted?
+[02:06.86] agent: If you're not sure, I can confirm your name and date of birth again. Just let me know.
+[02:14.96] patient: I'm sure. My name is Priya Miller, DOB June 30, 1988. Can you please check if you accept Blue Cross PPO?
+[02:16.80] agent: Would you like me to look up your record using your
+[02:22.82] patient: Yes, please look up my record and check if Blue Cross PPO is accepted.
+[02:26.81] agent: please spell out your first and last name. And confirm your date of birth one more time.
+[02:33.05] patient: P-R-I-Y-A M-I-L-L-E-R, date of birth June 30, 1988. Now can you please check if you accept Blue Cross PPO?
+[02:34.49] agent: I need to confirm your information before checking your insurance.
+[02:39.49] patient: I've confirmed my name and DOB three times now. Can you please just tell me if you accept Blue Cross PPO?
+[02:39.49] agent: Please spell out your first and last name and confirm your date of birth.
+[02:45.55] patient: P-R-I-Y-A M-I-L-L-E-R, June 30, 1988. Now please answer: do you accept Blue Cross PPO?
+[03:10.97] agent: I have your name as Priya Miller. Date of birth, 06/30/1988. And your phone number as (781) 323-0490.
+[03:15.11] patient: Great, thanks. Now can you please tell me if you accept Blue Cross PPO?
+[03:15.11] agent: Is all of that correct?
+[03:19.48] patient: Yes, that's all correct. Now please tell me, do you accept Blue Cross PPO?

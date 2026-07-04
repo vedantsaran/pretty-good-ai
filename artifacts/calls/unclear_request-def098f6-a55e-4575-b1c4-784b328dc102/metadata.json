@@ -1,0 +1,184 @@
+{
+  "call_sid": "def098f6-a55e-4575-b1c4-784b328dc102",
+  "scenario_id": "unclear_request",
+  "started_at_epoch": 1783139472.5284128,
+  "duration_seconds": 130.384,
+  "turns": [
+    {
+      "time": 4.563,
+      "speaker": "agent",
+      "text": "Be recorded for quality and training purposes.",
+      "meta": {}
+    },
+    {
+      "time": 8.052,
+      "speaker": "patient",
+      "text": "Hi, I need help with the thing from my last visit.",
+      "meta": {
+        "reason": "Starting vague to test if the agent asks clarifying questions.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 9.648,
+      "speaker": "agent",
+      "text": "Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 13.106,
+      "speaker": "patient",
+      "text": "Yeah, I was in last week and I need that thing you guys were supposed to send me.",
+      "meta": {
+        "reason": "Staying vague to test if the agent asks clarifying questions to identify the specific request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 31.286,
+      "speaker": "agent",
+      "text": "I can help with that. Can you tell me a bit more about what you were to receive? For example, was it paperwork, a prescription, or something else?",
+      "meta": {}
+    },
+    {
+      "time": 35.127,
+      "speaker": "patient",
+      "text": "It's like a lab order form, I think. I need it sent to my email.",
+      "meta": {
+        "reason": "Patient provides a bit more detail about needing a lab order form sent to email, testing if agent will clarify further or proceed.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 44.852,
+      "speaker": "agent",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Vedah?",
+      "meta": {}
+    },
+    {
+      "time": 48.154,
+      "speaker": "patient",
+      "text": "No, this is Jordan Lee. I need that lab order sent to my email.",
+      "meta": {
+        "reason": "Correcting the agent's mistaken identity and restating the specific request to keep the conversation on track.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 56.711,
+      "speaker": "agent",
+      "text": "Please provide your date of birth.",
+      "meta": {}
+    },
+    {
+      "time": 60.895,
+      "speaker": "patient",
+      "text": "03/19/2001.",
+      "meta": {
+        "reason": "Provide date of birth as requested to move the conversation toward getting the lab order sent to email.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 79.944,
+      "speaker": "agent",
+      "text": "Just to confirm, I have your name as Jordan Lee and your date of birth as March 2001. Is that correct? If so, could you please spell your first and last name for me?",
+      "meta": {}
+    },
+    {
+      "time": 83.767,
+      "speaker": "patient",
+      "text": "Yes, that's correct. Can you just send the lab order to my email?",
+      "meta": {
+        "reason": "Patient confirms identity but avoids spelling to keep conversation focused on the lab order request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 102.346,
+      "speaker": "agent",
+      "text": "I have your phone number as (781) 323-0490. And your date of birth as 03/19/2001. Is that correct?",
+      "meta": {}
+    },
+    {
+      "time": 107.319,
+      "speaker": "patient",
+      "text": "Yes, that's right. Please just send the lab order to my email.",
+      "meta": {
+        "reason": "Confirming identity to move past verification and get the lab order sent to email.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 119.804,
+      "speaker": "agent",
+      "text": "Connecting you to a representative. Please wait.",
+      "meta": {}
+    },
+    {
+      "time": 123.611,
+      "speaker": "patient",
+      "text": "Thank you, I'll wait.",
+      "meta": {
+        "reason": "Agent is handing off to a representative, which should fulfill the request. Patient confirms and waits politely.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 124.779,
+      "speaker": "agent",
+      "text": "Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "meta": {}
+    },
+    {
+      "time": 129.497,
+      "speaker": "patient",
+      "text": "Hello? Did I get disconnected? I still need that lab order sent to my email.",
+      "meta": {
+        "reason": "The agent abruptly ended with a test line message. Patient tries to re-engage to complete the request.",
+        "end_call": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "time": 0.001,
+      "event": "signalwire_start",
+      "payload": {
+        "streamSid": "f3231e7d-a195-404f-8769-1932e0d1cb27",
+        "accountSid": "88c611f8-76aa-4b3d-8b9c-a45c093871c7",
+        "callSid": "def098f6-a55e-4575-b1c4-784b328dc102",
+        "tracks": [
+          "inbound"
+        ],
+        "mediaFormat": {
+          "encoding": "audio/x-mulaw",
+          "sampleRate": 8000,
+          "channels": 1
+        }
+      }
+    },
+    {
+      "time": 9.648,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 124.779,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 130.309,
+      "event": "signalwire_stop",
+      "payload": {
+        "event": "stop",
+        "sequenceNumber": "6649"
+      }
+    }
+  ]
+}

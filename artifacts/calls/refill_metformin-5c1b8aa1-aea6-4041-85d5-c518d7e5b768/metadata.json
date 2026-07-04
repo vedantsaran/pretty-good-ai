@@ -1,0 +1,441 @@
+{
+  "call_sid": "5c1b8aa1-aea6-4041-85d5-c518d7e5b768",
+  "scenario_id": "refill_metformin",
+  "started_at_epoch": 1783138462.970239,
+  "duration_seconds": 196.663,
+  "turns": [
+    {
+      "time": 5.685,
+      "speaker": "agent",
+      "text": "Recorded for quality and training purposes.",
+      "meta": {}
+    },
+    {
+      "time": 9.484,
+      "speaker": "patient",
+      "text": "Hi, I need a refill for my metformin prescription.",
+      "meta": {
+        "reason": "Patient initiates the call with the refill request as per scenario opening line.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 9.485,
+      "speaker": "agent",
+      "text": "Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI.",
+      "meta": {}
+    },
+    {
+      "time": 12.691,
+      "speaker": "patient",
+      "text": "Hi, I need a refill for my metformin prescription.",
+      "meta": {
+        "reason": "Patient initiates the refill request as per scenario objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 12.692,
+      "speaker": "agent",
+      "text": "May I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 16.585,
+      "speaker": "patient",
+      "text": "Yes, I need a refill for my metformin 500 milligrams.",
+      "meta": {
+        "reason": "Patient repeats the refill request with the medication strength, as the agent hasn't captured the details yet.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 26.661,
+      "speaker": "agent",
+      "text": "I see you're calling from the number we have on file.",
+      "meta": {}
+    },
+    {
+      "time": 30.203,
+      "speaker": "patient",
+      "text": "Yes, that's right. Can you process my refill?",
+      "meta": {
+        "reason": "Patient confirms identity and pushes toward refill request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 30.204,
+      "speaker": "agent",
+      "text": "I speaking with?",
+      "meta": {}
+    },
+    {
+      "time": 32.123,
+      "speaker": "patient",
+      "text": "This is Aaron Patel.",
+      "meta": {
+        "reason": "Providing my name as requested to proceed with the refill request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 38.165,
+      "speaker": "agent",
+      "text": "Please provide your full date of birth.",
+      "meta": {}
+    },
+    {
+      "time": 41.499,
+      "speaker": "patient",
+      "text": "It's February 14, 1966.",
+      "meta": {
+        "reason": "Patient provides their date of birth as requested to proceed with the refill request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 50.983,
+      "speaker": "agent",
+      "text": "Just to confirm.",
+      "meta": {}
+    },
+    {
+      "time": 54.839,
+      "speaker": "patient",
+      "text": "Yes, that's correct. Can you refill my metformin?",
+      "meta": {
+        "reason": "Confirming identity and steering toward the refill request",
+        "end_call": false
+      }
+    },
+    {
+      "time": 54.84,
+      "speaker": "agent",
+      "text": "Can you please spell your first and last name for me?",
+      "meta": {}
+    },
+    {
+      "time": 58.379,
+      "speaker": "patient",
+      "text": "Sure, A-A-R-O-N, last name P-A-T-E-L.",
+      "meta": {
+        "reason": "Patient provides spelling as requested to proceed with refill request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 69.608,
+      "speaker": "agent",
+      "text": "Could you please finish spelling your last name?",
+      "meta": {}
+    },
+    {
+      "time": 72.666,
+      "speaker": "patient",
+      "text": "P-A-T-E-L. That's my full last name.",
+      "meta": {
+        "reason": "Patient completes spelling of last name as requested by agent.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 83.829,
+      "speaker": "agent",
+      "text": "Would you like me to look up your record using the phone number you have on file with us?",
+      "meta": {}
+    },
+    {
+      "time": 87.628,
+      "speaker": "patient",
+      "text": "Yes, please look up my record. I need my metformin refilled.",
+      "meta": {
+        "reason": "Patient agrees to lookup to move refill forward, reiterating medication request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 89.889,
+      "speaker": "agent",
+      "text": "If so, please provide that number. If you're not sure, I can confirm your name and date of birth",
+      "meta": {}
+    },
+    {
+      "time": 94.56,
+      "speaker": "patient",
+      "text": "I don't remember which number I have on file. Can you just use my name and birth date to look me up?",
+      "meta": {
+        "reason": "Patient provides alternative verification to avoid giving phone number, steering toward refill request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 94.561,
+      "speaker": "agent",
+      "text": "Please tell me the phone number you have on file with us.",
+      "meta": {}
+    },
+    {
+      "time": 100.231,
+      "speaker": "patient",
+      "text": "I'm not sure which number I have on file. Can you try (555) 832-9041?",
+      "meta": {
+        "reason": "Providing a plausible synthetic phone number to satisfy the agent's request so we can proceed to the refill and pharmacy details.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 112.126,
+      "speaker": "agent",
+      "text": "No problem. Could you please spell your first and last name for me one more time and confirm your date of birth?",
+      "meta": {}
+    },
+    {
+      "time": 118.919,
+      "speaker": "patient",
+      "text": "A-A-R-O-N, P-A-T-E-L, born February 14, 1966. Can you please refill my metformin now?",
+      "meta": {
+        "reason": "Repeating name and DOB as requested, and steering back to the refill objective.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 128.154,
+      "speaker": "agent",
+      "text": "Could you please spell your first and last name clearly for me? And confirm your date of birth?",
+      "meta": {}
+    },
+    {
+      "time": 136.388,
+      "speaker": "patient",
+      "text": "I already spelled it: A-A-R-O-N P-A-T-E-L, DOB 02/14/1966. Please just process my metformin refill.",
+      "meta": {
+        "reason": "Patient is frustrated by repeated identity verification and wants to move on to the refill request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 140.397,
+      "speaker": "agent",
+      "text": "I need to confirm your information before I can help. Please spell your first and last name and confirm your date of birth.",
+      "meta": {}
+    },
+    {
+      "time": 146.277,
+      "speaker": "patient",
+      "text": "A-A-R-O-N, P-A-T-E-L, February 14, 1966. I only have two days of metformin left.",
+      "meta": {
+        "reason": "Patient complies with agent's request again, emphasizing urgency to move the refill forward.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 149.352,
+      "speaker": "agent",
+      "text": "Thank you. Could you please spell your first name as well and confirm your full date of birth?",
+      "meta": {}
+    },
+    {
+      "time": 155.86,
+      "speaker": "patient",
+      "text": "I just did. A-A-R-O-N, P-A-T-E-L, February 14, 1966. I'm running out of metformin.",
+      "meta": {
+        "reason": "Patient is frustrated but compliant, repeating info to move toward refill request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 161.281,
+      "speaker": "agent",
+      "text": "I have your phone number as 781323",
+      "meta": {}
+    },
+    {
+      "time": 165.726,
+      "speaker": "patient",
+      "text": "That's not my number. Please just use my name and DOB to refill my metformin.",
+      "meta": {
+        "reason": "Correcting the wrong phone number and steering back to the refill request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 169.011,
+      "speaker": "agent",
+      "text": "I can't proceed further right now.",
+      "meta": {}
+    },
+    {
+      "time": 173.85,
+      "speaker": "patient",
+      "text": "Can you please transfer me to someone who can help with my metformin refill? I'm almost out.",
+      "meta": {
+        "reason": "The agent is stuck on verification and won't proceed. Requesting a transfer may get me to someone who can handle the refill.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 175.004,
+      "speaker": "agent",
+      "text": "I can make sure our clinic support team follows up with you. Please hold while I document your request.",
+      "meta": {}
+    },
+    {
+      "time": 179.385,
+      "speaker": "patient",
+      "text": "Thank you. Please note my pharmacy is CVS on State Street for the metformin refill.",
+      "meta": {
+        "reason": "Providing pharmacy details to complete the refill request before being transferred.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 179.386,
+      "speaker": "agent",
+      "text": "Connecting you to a representative. Please wait.",
+      "meta": {}
+    },
+    {
+      "time": 181.848,
+      "speaker": "patient",
+      "text": "Thank you, I'll hold.",
+      "meta": {
+        "reason": "Patient is being transferred to a representative, so waiting is appropriate to complete the refill request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 183.918,
+      "speaker": "agent",
+      "text": "Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "meta": {}
+    },
+    {
+      "time": 187.524,
+      "speaker": "patient",
+      "text": "Wait, I still need my refill. Can someone call me back?",
+      "meta": {
+        "reason": "The agent disconnected without completing the refill request. Patient needs to ensure the request is actually processed.",
+        "end_call": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "time": 0.001,
+      "event": "signalwire_start",
+      "payload": {
+        "streamSid": "b668c281-0123-4970-a032-aea0a4d77b20",
+        "accountSid": "88c611f8-76aa-4b3d-8b9c-a45c093871c7",
+        "callSid": "5c1b8aa1-aea6-4041-85d5-c518d7e5b768",
+        "tracks": [
+          "inbound"
+        ],
+        "mediaFormat": {
+          "encoding": "audio/x-mulaw",
+          "sampleRate": 8000,
+          "channels": 1
+        }
+      }
+    },
+    {
+      "time": 9.485,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 12.692,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 30.204,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 54.84,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 89.889,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 94.561,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 128.155,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 140.398,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 149.352,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 161.282,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 169.011,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 175.004,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 179.386,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 196.586,
+      "event": "signalwire_stop",
+      "payload": {
+        "event": "stop",
+        "sequenceNumber": "9861"
+      }
+    }
+  ]
+}

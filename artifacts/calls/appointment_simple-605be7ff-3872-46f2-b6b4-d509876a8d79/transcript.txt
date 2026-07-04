@@ -1,0 +1,21 @@
+Call SID: 605be7ff-3872-46f2-b6b4-d509876a8d79
+Scenario: appointment_simple
+
+[00:05.88] agent: Recorded for quality and training purposes.
+[00:09.20] patient: Hi, I need to schedule a follow-up appointment for next week.
+[00:10.98] agent: Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?
+[00:14.08] patient: Hi, I need to schedule a follow-up appointment for next week.
+[00:24.73] agent: I see you're calling from the number we have on file. Am I speaking with the?
+[00:27.19] patient: Yes, this is Maya Shah.
+[00:31.85] agent: Please provide your date of birth.
+[00:34.84] patient: It's April 18, 1993.
+[00:38.51] agent: I need your date of birth to continue. Could you please tell me your date of birth?
+[00:41.53] patient: I already said it: April 18, 1993.
+[00:59.62] agent: Thank you, Vedant. What time of appointment would you like to schedule? For example, is this for a routine visit, a follow-up, something urgent, or a procedure?
+[01:03.68] patient: It's a follow-up for knee pain, and I'm available Tuesday or Thursday morning next week.
+[01:31.65] agent: We have openings with Judy Hauser on Tuesday, July 7 at 11AM, 1PM, and 2PM. Would you like to book one of these times?
+[01:35.53] patient: Yes, Tuesday at 11 AM works for me.
+[02:01.98] agent: The dot, your follow-up appointment is set for Tuesday, July 7 at 11AM with doctor Duvihauser at Pivot Point Orthopedics. Please bring your photo ID, insurance card, a list of your current medications, and any imaging discs you have. Is there anything else I can help you with?
+[02:04.77] patient: No, that's all. Thank you!
+[02:13.31] agent: You're all set. Have a great day.
+[02:15.39] patient: Thank you, goodbye.

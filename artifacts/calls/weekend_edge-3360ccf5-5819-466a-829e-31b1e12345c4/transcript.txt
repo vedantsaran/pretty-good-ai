@@ -1,0 +1,31 @@
+Call SID: 3360ccf5-5819-466a-829e-31b1e12345c4
+Scenario: weekend_edge
+
+[00:05.71] agent: Recorded for quality and training purposes.
+[00:09.28] patient: Hi, can I come in this Sunday at 10 in the morning?
+[00:14.71] agent: Thanks for calling Pivot Point Orthopaedics, part of Pretty Good a How may I help you today?
+[00:18.91] patient: Hi, can I come in this Sunday at 10 in the morning?
+[00:22.38] agent: The clinic is open Monday through Friday, so we're closed on Sundays. Would you like to look for an appointment
+[00:25.49] patient: Yes, what do you have on Monday morning?
+[00:27.04] agent: The clinic is closed on Sundays. We're
+[00:30.43] patient: Yes, what do you have on Monday morning?
+[00:40.88] agent: I see you're calling from the number we have on file. Am I speaking with Fadat?
+[00:43.57] patient: No, this is Chris Jordan.
+[00:50.19] agent: Please provide your date of birth.
+[00:55.92] patient: January 22, 1990.
+[01:08.13] agent: Can you please spell your first and last name to make sure I have it correct?
+[01:11.77] patient: C-H-R-I-S, J-O-R-D-A-N.
+[01:33.85] agent: Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:38.51] patient: Let's just use my name and date of birth again. Chris Jordan, January 22, 1990.
+[01:40.94] agent: We
+[01:44.28] patient: Yes, what do you have on Monday morning?
+[01:49.05] agent: please spell your first and last name for me one more time. Just to be sure?
+[01:53.51] patient: C-H-R-I-S, J-O-R-D-A-N. Can you check Monday morning for me?
+[02:00.78] agent: And can you please spell your last name as well?
+[02:05.75] patient: J-O-R-D-A-N. Can you please check Monday morning availability?
+[02:26.24] agent: I have your phone number as (781) 323-0490 and your date of birth as 01/22/1990. Is that correct?
+[02:30.23] patient: Yes, that's correct. Can you check Monday morning availability?
+[02:43.34] agent: I can't proceed further right now, but I can make sure our clinic support team follows up with you.
+[02:47.10] patient: Okay, thank you. Please have them call me back about Monday morning.
+[02:47.12] agent: Would you like me to have them contact you about Monday morning availability?
+[02:50.47] patient: Yes, please have them call me about Monday morning.

@@ -1,0 +1,345 @@
+{
+  "call_sid": "d0b5a7e9-e775-4dc5-81e2-2aa9c9d43c78",
+  "scenario_id": "cancel_appointment",
+  "started_at_epoch": 1783138166.429255,
+  "duration_seconds": 201.646,
+  "turns": [
+    {
+      "time": 5.755,
+      "speaker": "agent",
+      "text": "Be recorded for quality and training purposes.",
+      "meta": {}
+    },
+    {
+      "time": 9.249,
+      "speaker": "patient",
+      "text": "Hi, I need to cancel my appointment for tomorrow.",
+      "meta": {
+        "reason": "Patient initiates the cancellation request as per scenario.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 11.225,
+      "speaker": "agent",
+      "text": "Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?",
+      "meta": {}
+    },
+    {
+      "time": 14.457,
+      "speaker": "patient",
+      "text": "Hi, I need to cancel my appointment for tomorrow.",
+      "meta": {
+        "reason": "Repeating the opening request to clearly state the cancellation goal.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 21.79,
+      "speaker": "agent",
+      "text": "See you're calling from the number we have on file. Am I speaking with Vedant?",
+      "meta": {}
+    },
+    {
+      "time": 24.634,
+      "speaker": "patient",
+      "text": "No, this is Olivia Nguyen.",
+      "meta": {
+        "reason": "Correcting the agent's mistaken identity to proceed with cancellation.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 35.262,
+      "speaker": "agent",
+      "text": "Please provide your date birth as well, Olivia.",
+      "meta": {}
+    },
+    {
+      "time": 38.749,
+      "speaker": "patient",
+      "text": "It's 08/09/1974.",
+      "meta": {
+        "reason": "Providing the requested date of birth to proceed with cancellation.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 59.903,
+      "speaker": "agent",
+      "text": "Just to confirm, I have your name as Olivia Nguyen. And your date of birth as 08/09/1974. Is that correct? If so, could you please spell your first and last name for me?",
+      "meta": {}
+    },
+    {
+      "time": 64.108,
+      "speaker": "patient",
+      "text": "Yes, that's correct. O-L-I-V-I-A N-G-U-Y-E-N.",
+      "meta": {
+        "reason": "Confirming identity so we can proceed to cancel the appointment.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 69.754,
+      "speaker": "agent",
+      "text": "Could you please spell your first and name for me?",
+      "meta": {}
+    },
+    {
+      "time": 74.584,
+      "speaker": "patient",
+      "text": "I already spelled it: O-L-I-V-I-A N-G-U-Y-E-N.",
+      "meta": {
+        "reason": "Repeating spelling as agent seems to have missed it; staying on track to cancel appointment.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 79.701,
+      "speaker": "agent",
+      "text": "Could you please spell out your full first and last name letter by letter?",
+      "meta": {}
+    },
+    {
+      "time": 84.335,
+      "speaker": "patient",
+      "text": "O-L-I-V-I-A N-G-U-Y-E-N. That's my full name.",
+      "meta": {
+        "reason": "Patient complies with the spelling request to move forward with cancellation.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 86.512,
+      "speaker": "agent",
+      "text": "Could you please tell me if you are the patient, or are you calling on behalf of someone",
+      "meta": {}
+    },
+    {
+      "time": 88.743,
+      "speaker": "patient",
+      "text": "I am the patient.",
+      "meta": {
+        "reason": "Confirming identity to proceed with cancellation request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 105.631,
+      "speaker": "agent",
+      "text": "Would you like me to look up your record using your phone number? If so, please provide the number you have on file with us.",
+      "meta": {}
+    },
+    {
+      "time": 110.587,
+      "speaker": "patient",
+      "text": "I already gave you my name and DOB. Can we just cancel my appointment for tomorrow at 2 PM?",
+      "meta": {
+        "reason": "Patient is frustrated with repeated verification and wants to move forward with cancellation.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 110.762,
+      "speaker": "agent",
+      "text": "If you're not sure, I can confirm your name and date of birth again. Let me know which you prefer.",
+      "meta": {}
+    },
+    {
+      "time": 116.629,
+      "speaker": "patient",
+      "text": "My name is Olivia Nguyen, DOB 08/09/1974. Please cancel my appointment tomorrow at 2 PM.",
+      "meta": {
+        "reason": "Repeating the key details clearly to move past the verification loop and get to the cancellation.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 132.138,
+      "speaker": "agent",
+      "text": "Thank you. Please spell your last name, Nolan, letter by letter.",
+      "meta": {}
+    },
+    {
+      "time": 135.98,
+      "speaker": "patient",
+      "text": "My last name is Nguyen, not Nolan. N-G-U-Y-E-N.",
+      "meta": {
+        "reason": "Correcting the agent's mistaken last name and reiterating spelling to move forward with cancellation.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 145.743,
+      "speaker": "agent",
+      "text": "Thank you for clarifying. Please spell your last name Nguyen, letter by letter.",
+      "meta": {}
+    },
+    {
+      "time": 147.881,
+      "speaker": "patient",
+      "text": "N-G-U-Y-E-N.",
+      "meta": {
+        "reason": "Completing the spelling request to move forward with cancellation.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 156.374,
+      "speaker": "agent",
+      "text": "Could you please finish spelling your last name, Nguyen, letter by letter?",
+      "meta": {}
+    },
+    {
+      "time": 160.235,
+      "speaker": "patient",
+      "text": "I already spelled it: N-G-U-Y-E-N. That's the whole thing.",
+      "meta": {
+        "reason": "Patient has already spelled last name twice; reiterating clearly to move past verification and get to cancellation.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 177.342,
+      "speaker": "agent",
+      "text": "I'm unable to verify your information right now. I can connect you to our patient support team for help with canceling your appointment.",
+      "meta": {}
+    },
+    {
+      "time": 181.781,
+      "speaker": "patient",
+      "text": "Yes, please connect me to patient support. I need to cancel tomorrow's 2 PM appointment.",
+      "meta": {
+        "reason": "Agent cannot verify and offers transfer to patient support. Accepting to proceed with cancellation.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 181.782,
+      "speaker": "agent",
+      "text": "Would you like me to transfer you?",
+      "meta": {}
+    },
+    {
+      "time": 184.255,
+      "speaker": "patient",
+      "text": "Yes, please transfer me.",
+      "meta": {
+        "reason": "Patient agrees to transfer to patient support to complete cancellation, as agent cannot verify record.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 192.549,
+      "speaker": "agent",
+      "text": "Connecting you to a representative. Please wait.",
+      "meta": {}
+    },
+    {
+      "time": 195.291,
+      "speaker": "patient",
+      "text": "Thank you, I'll wait.",
+      "meta": {
+        "reason": "Patient is being transferred to support to cancel the appointment; objective is still in progress.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 195.883,
+      "speaker": "agent",
+      "text": "Hello. You've reached the Pretty Good AI test line.",
+      "meta": {}
+    },
+    {
+      "time": 200.413,
+      "speaker": "patient",
+      "text": "I'm sorry, I think I was transferred to the wrong place. I need to cancel my appointment for tomorrow at 2 PM.",
+      "meta": {
+        "reason": "The agent transferred to a test line instead of patient support. I need to redirect back to the cancellation request.",
+        "end_call": false
+      }
+    },
+    {
+      "time": 200.414,
+      "speaker": "agent",
+      "text": "Goodbye.",
+      "meta": {}
+    }
+  ],
+  "events": [
+    {
+      "time": 0.001,
+      "event": "signalwire_start",
+      "payload": {
+        "streamSid": "8f8bc2e3-e4de-49de-8f4f-ed8e2ca74788",
+        "accountSid": "88c611f8-76aa-4b3d-8b9c-a45c093871c7",
+        "callSid": "d0b5a7e9-e775-4dc5-81e2-2aa9c9d43c78",
+        "tracks": [
+          "inbound"
+        ],
+        "mediaFormat": {
+          "encoding": "audio/x-mulaw",
+          "sampleRate": 8000,
+          "channels": 1
+        }
+      }
+    },
+    {
+      "time": 11.225,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 79.701,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 86.513,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 110.762,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 181.782,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 195.885,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 200.414,
+      "event": "patient_audio_interrupted",
+      "payload": {
+        "reason": "agent_barge_in"
+      }
+    },
+    {
+      "time": 201.589,
+      "event": "signalwire_stop",
+      "payload": {
+        "event": "stop",
+        "sequenceNumber": "10092"
+      }
+    }
+  ]
+}
