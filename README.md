@@ -108,8 +108,7 @@ uv run pgai-bot validate-artifacts
 - Call plan and submission checklist: ready
 - 10+ calls with transcripts and MP3 recordings: ready under `artifacts/calls/`
 - Bug report with call references and evidence: ready in `BUG_REPORT.md`
-- Loom walkthrough and AI-debugging screen recording: pending user action;
-  see `docs/LOOM_RECORDING_GUIDE.md`
+- Loom walkthrough and AI-debugging screen recording: pending user action
 
 ## Bug report draft
 
