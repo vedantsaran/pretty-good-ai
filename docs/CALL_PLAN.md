@@ -9,9 +9,10 @@ the live batch command at action time.
 uv run pgai-bot call-batch --limit 10 --pause 150
 ```
 
-The batch uses the first 10 scenarios in `scenarios/scenarios.json`, all from
-the single configured caller ID in `.env`, and the code locks the destination to
-the official assessment target configured from the challenge PDF.
+The batch uses the first 10 scenarios in
+`src/pgai_patient_bot/data/scenarios.json`, all from the single configured
+caller ID in `.env`, and the code locks the destination to the official
+assessment target configured from the challenge PDF.
 
 ## Primary 10-Call Set
 

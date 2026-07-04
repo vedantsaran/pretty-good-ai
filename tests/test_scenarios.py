@@ -1,4 +1,4 @@
-from pgai_patient_bot.scenarios import load_scenarios
+from pgai_patient_bot.scenarios import default_scenario_path, load_scenarios
 
 
 def test_at_least_ten_scenarios() -> None:
@@ -13,3 +13,7 @@ def test_scenario_ids_are_unique() -> None:
 def test_each_scenario_has_opening_line() -> None:
     for scenario in load_scenarios():
         assert scenario.opening_line.strip()
+
+
+def test_default_scenarios_are_packaged() -> None:
+    assert default_scenario_path().exists()

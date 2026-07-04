@@ -59,6 +59,7 @@ def test_other_target_rejected() -> None:
 
 def test_signalwire_settings_require_signalwire_fields(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("VOICE_PROVIDER", "signalwire")
+    monkeypatch.setenv("PG_TARGET_NUMBER", ASSESSMENT_NUMBER)
     monkeypatch.setenv("PUBLIC_BASE_URL", "https://example.ngrok-free.app/")
     monkeypatch.setenv("DEEPGRAM_API_KEY", "dg")
     monkeypatch.setenv("DEEPSEEK_API_KEY", "ds")
@@ -74,11 +75,22 @@ def test_signalwire_settings_require_signalwire_fields(monkeypatch: pytest.Monke
     assert missing_for_calls(settings) == []
 
 
+def test_target_number_is_required(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("PG_TARGET_NUMBER", raising=False)
+
+    settings = load_settings(env_file=None)
+
+    assert "PG_TARGET_NUMBER" in missing_for_calls(settings)
+    with pytest.raises(ConfigError, match="PG_TARGET_NUMBER"):
+        settings.require_safe_call_target()
+
+
 def test_check_env_does_not_print_phone_values(
     monkeypatch: pytest.MonkeyPatch,
     capsys: pytest.CaptureFixture[str],
 ) -> None:
     monkeypatch.setenv("VOICE_PROVIDER", "signalwire")
+    monkeypatch.setenv("PG_TARGET_NUMBER", ASSESSMENT_NUMBER)
     monkeypatch.setenv("PUBLIC_BASE_URL", "https://example.ngrok-free.app/")
     monkeypatch.setenv("DEEPGRAM_API_KEY", "dg")
     monkeypatch.setenv("DEEPSEEK_API_KEY", "ds")

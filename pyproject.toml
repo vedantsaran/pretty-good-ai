@@ -36,3 +36,6 @@ target-version = "py311"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+filterwarnings = [
+    'ignore:Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.:Warning',
+]

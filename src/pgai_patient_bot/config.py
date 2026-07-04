@@ -76,6 +76,10 @@ class Settings:
         return self.public_base_url
 
     def require_safe_call_target(self) -> None:
+        if not self.pg_target_number:
+            raise ConfigError(
+                "PG_TARGET_NUMBER must be set to the official assessment number."
+            )
         if normalize_e164(self.pg_target_number) != ASSESSMENT_NUMBER:
             raise ConfigError(
                 "Refusing to call the configured target. "
@@ -87,7 +91,7 @@ def load_settings(env_file: str | Path | None = ".env") -> Settings:
     if env_file:
         load_dotenv(env_file)
 
-    target = normalize_e164(os.getenv("PG_TARGET_NUMBER", ASSESSMENT_NUMBER))
+    target = normalize_e164(os.getenv("PG_TARGET_NUMBER", ""))
     from_number = normalize_e164(os.getenv("TWILIO_FROM_NUMBER", ""))
     signalwire_from_number = normalize_e164(os.getenv("SIGNALWIRE_FROM_NUMBER", ""))
     public_base_url = os.getenv("PUBLIC_BASE_URL", "").strip().rstrip("/")
@@ -132,6 +136,7 @@ def _normalize_signalwire_space_url(value: str) -> str:
 
 def missing_for_server(settings: Settings) -> list[str]:
     required = {
+        "PG_TARGET_NUMBER": settings.pg_target_number,
         "PUBLIC_BASE_URL": settings.public_base_url,
         "DEEPGRAM_API_KEY": settings.deepgram_api_key,
         "DEEPSEEK_API_KEY": settings.deepseek_api_key,
@@ -141,6 +146,7 @@ def missing_for_server(settings: Settings) -> list[str]:
 
 def missing_for_calls(settings: Settings) -> list[str]:
     required = {
+        "PG_TARGET_NUMBER": settings.pg_target_number,
         "PUBLIC_BASE_URL": settings.public_base_url,
         "DEEPGRAM_API_KEY": settings.deepgram_api_key,
         "DEEPSEEK_API_KEY": settings.deepseek_api_key,

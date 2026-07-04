@@ -90,6 +90,11 @@ Each call directory includes:
 Carrier recording callbacks also download call recordings when the provider
 makes the recording available.
 
+`agent-side.mp3` is the full-duration remote-agent side of the call.
+`patient-side.mp3` is the isolated synthesized-patient speech stream, so it is
+shorter than total call duration because it does not include silence between
+patient utterances.
+
 Check artifact structure after calls:
 
 ```bash
@@ -103,7 +108,8 @@ uv run pgai-bot validate-artifacts
 - Call plan and submission checklist: ready
 - 10+ calls with transcripts and MP3 recordings: ready under `artifacts/calls/`
 - Bug report with call references and evidence: ready in `BUG_REPORT.md`
-- Loom walkthrough and AI-debugging screen recording: pending user action
+- Loom walkthrough and AI-debugging screen recording: pending user action;
+  see `docs/LOOM_RECORDING_GUIDE.md`
 
 ## Bug report draft
 

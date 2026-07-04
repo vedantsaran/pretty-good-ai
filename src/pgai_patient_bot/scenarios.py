@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
+from importlib.resources import files
 from pathlib import Path
 
 
@@ -38,12 +39,17 @@ class Scenario:
 
 
 def default_scenario_path() -> Path:
-    return Path(__file__).resolve().parents[2] / "scenarios" / "scenarios.json"
+    return Path(__file__).resolve().parent / "data" / "scenarios.json"
 
 
 def load_scenarios(path: Path | None = None) -> list[Scenario]:
-    scenario_path = path or default_scenario_path()
-    raw = json.loads(scenario_path.read_text(encoding="utf-8"))
+    if path is None:
+        raw_text = files("pgai_patient_bot").joinpath("data/scenarios.json").read_text(
+            encoding="utf-8"
+        )
+    else:
+        raw_text = path.read_text(encoding="utf-8")
+    raw = json.loads(raw_text)
     scenarios = [Scenario(**item) for item in raw]
     ids = [scenario.id for scenario in scenarios]
     duplicate_ids = sorted({scenario_id for scenario_id in ids if ids.count(scenario_id) > 1})
