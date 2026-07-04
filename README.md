@@ -41,13 +41,14 @@ Do not commit `.env`.
 
 ## Expose the local server
 
-Use one of these:
+Recommended free temporary tunnel:
 
 ```bash
-ngrok http 8000
+cloudflared tunnel --url http://localhost:8000
 ```
 
-or a Cloudflare Tunnel. Put the public HTTPS URL in `PUBLIC_BASE_URL`.
+Copy the generated `https://...trycloudflare.com` URL into `PUBLIC_BASE_URL`.
+You can also use ngrok if you prefer.
 
 ## Run
 
@@ -98,3 +99,9 @@ uv run pgai-bot analyze --output docs/bug_report_draft.md
 ```
 
 Manually review the generated report against the recordings before submitting.
+
+## Local tools already installed on this machine
+
+- `uv`
+- `ffmpeg`
+- `cloudflared`
